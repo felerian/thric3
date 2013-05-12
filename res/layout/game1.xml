@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    >
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:src="@drawable/logo"
+        android:layout_margin="50dp"
+        android:layout_weight="6"
+        />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        >
+        <ImageView
+            android:onClick="onButtonThric3Player1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/card_back"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_score"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/text_score_player1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="0"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</LinearLayout>
+

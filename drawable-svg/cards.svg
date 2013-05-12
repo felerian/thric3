@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="card_back.svg">
+  <defs
+     id="defs4">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5534"
+       id="pattern5555"
+       patternTransform="matrix(0.44853936,0.44853936,-0.44853936,0.44853936,-5.0000009,238.79076)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5532"
+       id="pattern5547"
+       patternTransform="matrix(0.31736223,0.31736223,-0.31736223,0.31736223,-13.571429,238.07647)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5525"
+       id="pattern5534"
+       patternTransform="matrix(0.44853936,0.44853936,-0.44853936,0.44853936,-5.0000009,238.79076)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5525"
+       id="pattern5532"
+       patternTransform="matrix(0.31736223,0.31736223,-0.31736223,0.31736223,-13.571429,238.07647)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5307"
+       id="pattern5448"
+       patternTransform="matrix(0.66164062,0.66164062,-0.66164062,0.66164062,18.609386,357.80413)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5401"
+       id="pattern5428"
+       patternTransform="matrix(1.066911,1.066911,-1.066911,1.066911,265.03796,335.66128)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5398"
+       id="pattern5401"
+       patternTransform="matrix(1.066911,1.066911,-1.066911,1.066911,265.03796,335.66128)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5307"
+       id="pattern5398"
+       patternTransform="matrix(1.066911,1.066911,-1.066911,1.066911,25.037958,335.66128)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5301"
+       id="pattern5309"
+       patternTransform="translate(17.4513,360.5641)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern5301"
+       id="pattern5307"
+       patternTransform="matrix(0.66164062,0.66164062,-0.66164062,0.66164062,18.609386,357.80413)" />
+    <linearGradient
+       id="linearGradient5281"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop5283" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5275"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffff37;stop-opacity:1;"
+         offset="0"
+         id="stop5277" />
+    </linearGradient>
+    <pattern
+       inkscape:stockid="Checkerboard"
+       id="Checkerboard"
+       patternTransform="translate(0,0) scale(10,10)"
+       height="2"
+       width="2"
+       patternUnits="userSpaceOnUse"
+       inkscape:collect="always">
+      <rect
+         id="rect4571"
+         height="1"
+         width="1"
+         y="0"
+         x="0"
+         style="fill:black;stroke:none" />
+      <rect
+         id="rect4573"
+         height="1"
+         width="1"
+         y="1"
+         x="1"
+         style="fill:black;stroke:none" />
+    </pattern>
+    <linearGradient
+       id="linearGradient3761">
+      <stop
+         style="stop-color:#fde2bb;stop-opacity:1;"
+         offset="0"
+         id="stop3763" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop3765" />
+    </linearGradient>
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="21.259842"
+       height="21.259834"
+       patternTransform="translate(16.946224,360.05902)"
+       id="pattern5301">
+      <rect
+         ry="0"
+         rx="0"
+         y="0"
+         x="0"
+         height="10.629921"
+         width="10.629921"
+         id="rect5297"
+         style="fill:#ff0000;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ff0000;fill-opacity:1;stroke:none"
+         id="rect5299"
+         width="10.629921"
+         height="10.629921"
+         x="10.629921"
+         y="10.629913"
+         rx="0"
+         ry="0" />
+    </pattern>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5437"
+       x1="572.5141"
+       y1="525.25586"
+       x2="364.76941"
+       y2="238.11305"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5445"
+       x1="332.68561"
+       y1="525.25592"
+       x2="125.31215"
+       y2="238.11304"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5451"
+       gradientUnits="userSpaceOnUse"
+       x1="332.68561"
+       y1="525.25592"
+       x2="125.31215"
+       y2="238.11304" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="52.857143"
+       height="52.857145"
+       patternTransform="translate(-12.142858,243.79076)"
+       id="pattern5525">
+      <g
+         id="g5521"
+         transform="translate(12.142858,-243.79076)">
+        <rect
+           style="fill:#c80000;fill-opacity:1;stroke:none"
+           id="rect5517"
+           width="26.428572"
+           height="26.428572"
+           x="14.285714"
+           y="270.21933" />
+        <rect
+           y="243.79076"
+           x="-12.142858"
+           height="26.428572"
+           width="26.428572"
+           id="rect5519"
+           style="fill:#c80000;fill-opacity:1;stroke:none" />
+      </g>
+    </pattern>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5544"
+       gradientUnits="userSpaceOnUse"
+       x1="332.68561"
+       y1="525.25592"
+       x2="125.31215"
+       y2="238.11304" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5550"
+       gradientUnits="userSpaceOnUse"
+       x1="332.68561"
+       y1="525.25592"
+       x2="125.31215"
+       y2="238.11304" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5552"
+       gradientUnits="userSpaceOnUse"
+       x1="572.5141"
+       y1="525.25586"
+       x2="364.76941"
+       y2="238.11305" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5558"
+       gradientUnits="userSpaceOnUse"
+       x1="572.5141"
+       y1="525.25586"
+       x2="364.76941"
+       y2="238.11305" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5562"
+       gradientUnits="userSpaceOnUse"
+       x1="572.5141"
+       y1="525.25586"
+       x2="364.76941"
+       y2="238.11305"
+       gradientTransform="translate(0,360)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761"
+       id="linearGradient5566"
+       gradientUnits="userSpaceOnUse"
+       x1="332.68561"
+       y1="525.25592"
+       x2="125.31215"
+       y2="238.11304"
+       gradientTransform="translate(0,360)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="296.87267"
+     inkscape:cy="670.49401"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g5568"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-xhdpi/card_back.png"
+       inkscape:export-xdpi="101.59509"
+       inkscape:export-ydpi="101.59509">
+      <rect
+         ry="16.046036"
+         rx="16.046041"
+         y="218.86388"
+         x="125.71429"
+         height="324.21259"
+         width="207.28346"
+         id="rect2985"
+         style="fill:url(#linearGradient5550);fill-opacity:1;stroke:#000000;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         style="fill:url(#pattern5547);fill-opacity:1;stroke:#c80000;stroke-width:3.54330707;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect3757"
+         width="171.85039"
+         height="288.77954"
+         x="143.43082"
+         y="236.5804"
+         rx="8.974968"
+         ry="8.974968" />
+    </g>
+    <rect
+       style="fill:url(#pattern5309);stroke:none"
+       width="21.259842"
+       height="21.259834"
+       x="16.946224"
+       y="360.05902"
+       id="rect5305" />
+    <g
+       id="g5572"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-ldpi/card_back.png"
+       inkscape:export-xdpi="25.263159"
+       inkscape:export-ydpi="25.263159">
+      <rect
+         style="fill:url(#linearGradient5558);fill-opacity:1;stroke:#000000;stroke-width:3.54330707;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect5388"
+         width="207.28346"
+         height="324.21259"
+         x="365.71429"
+         y="218.86388"
+         rx="16.046041"
+         ry="16.046041" />
+      <rect
+         ry="8.974968"
+         rx="8.974968"
+         y="236.5804"
+         x="383.43082"
+         height="288.77954"
+         width="171.85039"
+         id="rect5390"
+         style="fill:url(#pattern5555);fill-opacity:1;stroke:#c80000;stroke-width:7.08661413;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <rect
+       style="stroke:none;fill:url(#pattern5525)"
+       width="52.857143"
+       height="52.857145"
+       x="-12.142858"
+       y="243.79076"
+       id="rect5530" />
+    <rect
+       style="fill:url(#linearGradient5562);fill-opacity:1;stroke:#000000;stroke-width:3.54330707;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect5560"
+       width="207.28346"
+       height="324.21259"
+       x="365.71429"
+       y="578.86389"
+       rx="16.046041"
+       ry="16.046041"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-mdpi/card_front.png"
+       inkscape:export-xdpi="50.526318"
+       inkscape:export-ydpi="50.526318" />
+    <rect
+       ry="16.046036"
+       rx="16.046041"
+       y="578.86389"
+       x="125.71429"
+       height="324.21259"
+       width="207.28346"
+       id="rect5564"
+       style="fill:url(#linearGradient5566);fill-opacity:1;stroke:#000000;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-xhdpi/card_front.png"
+       inkscape:export-xdpi="101.59509"
+       inkscape:export-ydpi="101.59509" />
+  </g>
+</svg>
