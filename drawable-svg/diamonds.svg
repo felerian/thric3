@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="49.606297"
+   height="49.606297"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="suit template.svg"
+   inkscape:export-filename="/home/kai/thric3-project/trunk/pics/Thric3/clubs_red_filled.png"
+   inkscape:export-xdpi="181.42857"
+   inkscape:export-ydpi="181.42857">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2824"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="52.727436"
+     inkscape:cy="45.332404"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="cm"
+     inkscape:window-width="1920"
+     inkscape:window-height="1152"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2832"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="cm"
+       spacingx="0.01cm"
+       spacingy="0.01cm" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1002.7546)">
+    <path
+       style="fill:#00961e;fill-opacity:1;stroke:none"
+       d="M 25.09375 4.21875 L 24.0625 5.09375 C 23.333714 6.3953451 22.188594 7.9455957 20.8125 9.625 L 25.71875 5.4375 C 25.463044 5.0047142 25.26359 4.5935689 25.09375 4.21875 z M 26.46875 6.59375 L 4.65625 25.28125 C 5.0387983 25.477708 5.4427239 25.728148 5.875 26 L 27.25 7.6875 C 26.969577 7.3074168 26.710697 6.9512215 26.46875 6.59375 z M 28.0625 8.75 L 7.03125 26.78125 C 7.3929032 27.035686 7.7744697 27.303817 8.15625 27.59375 L 28.90625 9.8125 C 28.614137 9.4587178 28.332097 9.0931212 28.0625 8.75 z M 29.75 10.84375 L 9.21875 28.4375 C 9.5643819 28.715414 9.9263856 28.982425 10.28125 29.28125 L 30.65625 11.84375 C 30.351956 11.502837 30.039604 11.18026 29.75 10.84375 z M 31.5625 12.84375 L 11.3125 30.1875 C 11.648973 30.482254 11.972779 30.785608 12.3125 31.09375 L 32.46875 13.8125 C 32.160382 13.488164 31.861813 13.168241 31.5625 12.84375 z M 33.40625 14.78125 L 13.3125 32 C 13.644889 32.31117 13.981308 32.617873 14.3125 32.9375 L 34.34375 15.75 C 34.024026 15.43268 33.72092 15.102683 33.40625 14.78125 z M 35.34375 16.6875 L 15.28125 33.875 C 15.60084 34.192487 15.904279 34.522215 16.21875 34.84375 L 36.3125 17.625 C 35.985325 17.319019 35.66985 17.001758 35.34375 16.6875 z M 37.3125 18.53125 L 17.15625 35.8125 C 17.469675 36.14248 17.758533 36.482446 18.0625 36.8125 L 38.3125 19.4375 C 37.975769 19.142873 37.652561 18.839372 37.3125 18.53125 z M 39.34375 20.34375 L 18.96875 37.8125 C 19.272365 38.153249 19.586193 38.476272 19.875 38.8125 L 40.40625 21.1875 C 40.060965 20.910311 39.69836 20.641942 39.34375 20.34375 z M 41.5 22.03125 L 20.75 39.84375 C 21.032194 40.186537 21.301652 40.542392 21.5625 40.875 L 42.625 22.84375 C 42.262285 22.589771 41.883321 22.321399 41.5 22.03125 z M 43.75 23.625 L 22.375 41.96875 C 22.65544 42.350226 22.914997 42.704148 23.15625 43.0625 L 44.96875 24.34375 C 44.591158 24.150832 44.176528 23.891997 43.75 23.625 z M 28.5625 40.21875 L 23.90625 44.21875 C 24.15975 44.651431 24.364968 45.063856 24.53125 45.4375 L 25.46875 44.65625 C 26.157637 43.3914 27.228499 41.865857 28.5625 40.21875 z "
+       transform="translate(0,1002.7546)"
+       id="rect5873" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial Black;-inkscape-font-specification:Arial Black"
+       x="-8.8582678"
+       y="960.23492"
+       id="text2816"><tspan
+         sodipodi:role="line"
+         id="tspan2818"
+         x="-8.8582678"
+         y="960.23492">Colors:</tspan><tspan
+         sodipodi:role="line"
+         x="-8.8582678"
+         y="970.23492"
+         id="tspan2820">red: 200, 0, 0</tspan><tspan
+         sodipodi:role="line"
+         x="-8.8582678"
+         y="980.23492"
+         id="tspan2822">green: 0, 150, 30</tspan><tspan
+         sodipodi:role="line"
+         x="-8.8582678"
+         y="990.23492"
+         id="tspan2824">blue: 30, 0, 150</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3595"
+       d="m 24.80315,1006.2979 c 1.771653,5.315 15.944881,19.4882 21.259842,21.2598 -5.314961,1.7717 -19.488189,15.9449 -21.259842,21.2599 -1.771654,-5.315 -15.944882,-19.4882 -21.259843,-21.2599 5.314961,-1.7716 19.488189,-15.9448 21.259843,-21.2598 z"
+       style="fill:none;stroke:#00961e;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
+</svg>
