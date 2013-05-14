@@ -46,6 +46,13 @@ class Player {
 	}
 	
 	/**
+	 * Adds a card to this player's pile.
+	 */
+	public void addCard(Card card) {
+		pile.addCard(card);
+	}
+	
+	/**
 	 * Returns this player's score, i.e. the number of cards on this
 	 * player's pile.
 	 * 

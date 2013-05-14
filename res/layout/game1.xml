@@ -77,7 +77,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
-                android:text="0"
+                android:text="-"
                 android:gravity="center"
                 />
         </LinearLayout>
