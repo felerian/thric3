@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
           android:drawable="@drawable/button_thric3_1_pressed" />
-    <item android:state_focused="true"
-          android:drawable="@drawable/button_thric3_1_focused" />
+    <item android:state_checked="true"
+          android:drawable="@drawable/button_thric3_1_checked" />
     <item android:drawable="@drawable/button_thric3_1_normal" />
 </selector>

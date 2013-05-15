@@ -19,11 +19,13 @@
             android:layout_weight="1"
             android:layout_gravity="bottom"
             >
-            <ImageView
+            <ToggleButton
                 android:onClick="onButtonThric3Player2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/button_thric3_2"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/button_thric3_2"
                 android:layout_marginBottom="10dp"
                 />
             <TextView
@@ -96,11 +98,13 @@
             android:layout_weight="1"
             android:layout_gravity="bottom"
             >
-            <ImageView
+            <ToggleButton
                 android:onClick="onButtonThric3Player1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/button_thric3_1"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/button_thric3_1"
                 android:layout_marginBottom="10dp"
                 />
             <TextView
