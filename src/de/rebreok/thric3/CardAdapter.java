@@ -40,7 +40,7 @@ public class CardAdapter extends ArrayAdapter<Card> {
     public Pile getSelectedCards() {
         Pile result = new Pile();
         for (int i: selection) {
-            result.addCard(getItem(i));
+            result.add(getItem(i));
         }
         return result;
     }

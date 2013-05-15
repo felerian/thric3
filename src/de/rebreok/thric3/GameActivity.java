@@ -69,7 +69,7 @@ public class GameActivity extends Activity
     
     private void updateUI() {
         TextView cardsLeft = (TextView) findViewById(R.id.text_cards_left);
-        cardsLeft.setText(String.valueOf(deck.getSize()));
+        cardsLeft.setText(String.valueOf(deck.size()));
         TextView playerScore;
         playerScore = (TextView) findViewById(R.id.text_score_player1);
         playerScore.setText(String.valueOf(players.get(0).getScore()));
@@ -141,8 +141,8 @@ public class GameActivity extends Activity
                 nr_of_cards_to_deal = 3;
             }
             for (int i=0; i < nr_of_cards_to_deal; i++) {
-                if (deck.getSize() > 0) {
-                    grid.add(deck.drawCard());
+                if (deck.size() > 0) {
+                    grid.add(deck.pop());
                 }
             }
             if (nr_of_cards_to_deal == 0) {

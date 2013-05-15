@@ -49,7 +49,7 @@ class Player {
 	 * Adds a card to this player's pile.
 	 */
 	public void addCard(Card card) {
-		pile.addCard(card);
+		pile.add(card);
 	}
 	
 	/**
@@ -59,7 +59,7 @@ class Player {
 	 * @return	the score
 	 */
 	public int getScore() {
-		return pile.getSize();
+		return pile.size();
 	}
 }
 
