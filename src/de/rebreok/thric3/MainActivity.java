@@ -27,11 +27,11 @@ public class MainActivity extends Activity
         setContentView(R.layout.main);
     }
     
-    public void onButtonTutorial(View view) {
-        Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra(GAME_MODE, MODE_TUTORIAL);
-        startActivity(intent);
-    }
+    //~ public void onButtonTutorial(View view) {
+        //~ Intent intent = new Intent(this, GameActivity.class);
+        //~ intent.putExtra(GAME_MODE, MODE_TUTORIAL);
+        //~ startActivity(intent);
+    //~ }
     
     public void onButtonSolitaire(View view) {
         Intent intent = new Intent(this, GameActivity.class);
@@ -57,17 +57,9 @@ public class MainActivity extends Activity
         startActivity(intent);
     }
     
-    public void onButtonVsAi(View view) {
-        Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra(GAME_MODE, MODE_VS_AI);
-        startActivity(intent);
-    }
-    
-    public void onButtonHelp(View view) {
-        
-    }
-    
-    public void onButtonAbout(View view) {
-        
-    }
+    //~ public void onButtonVsAi(View view) {
+        //~ Intent intent = new Intent(this, GameActivity.class);
+        //~ intent.putExtra(GAME_MODE, MODE_VS_AI);
+        //~ startActivity(intent);
+    //~ }
 }

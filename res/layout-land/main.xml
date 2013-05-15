@@ -27,46 +27,56 @@
             android:layout_gravity="center"
             android:gravity="center"
             >
+<!--
             <Button
                 android:onClick="onButtonTutorial"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/button_tutorial"
+                android:textColor="#ff000000"
+                android:fontFamily="serif"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                android:background="@drawable/card_front"
                 android:enabled="false"
                 />
+-->
             <Button
                 android:onClick="onButtonSolitaire"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/button_solitaire"
+                android:textColor="#ff000000"
+                android:fontFamily="serif"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                android:background="@drawable/card_front"
                 />
             <Button
                 android:onClick="onButtonMultiplayer"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/button_multiplayer"
+                android:textColor="#ff000000"
+                android:fontFamily="serif"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                android:background="@drawable/card_front"
                 />
+<!--
             <Button
                 android:onClick="onButtonVsAi"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/button_vs_ai"
+                android:textColor="#ff000000"
+                android:fontFamily="serif"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                android:background="@drawable/card_front"
                 android:enabled="false"
                 />
-            <Button
-                android:onClick="onButtonHelp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_help"
-                android:enabled="false"
-                />
-            <Button
-                android:onClick="onButtonAbout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_about"
-                android:enabled="false"
-                />
+-->
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
