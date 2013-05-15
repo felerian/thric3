@@ -19,11 +19,11 @@ public class GameActivity extends Activity
     private Deck deck;
     private CardAdapter grid;
     private ArrayList<Player> players;
-    private int activePlayerIndex;
+    private Player activePlayer;
     
     private OnItemClickListener cardClickedHandler = new OnItemClickListener() {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
-            if (activePlayerIndex == -1) {
+            if (activePlayer == null) {
                 Toast.makeText(v.getContext(), R.string.toast_call_set_first, 2).show();
             } else {
                 grid.toggleSelection(position);
@@ -38,7 +38,7 @@ public class GameActivity extends Activity
         super.onCreate(savedInstanceState);
         Resources res = getResources();
         players = new ArrayList<Player>();
-        activePlayerIndex = -1;
+        activePlayer = null;
         switch (getIntent().getIntExtra(MainActivity.GAME_MODE, -1))
         {
             case MainActivity.MODE_1P:
@@ -64,6 +64,7 @@ public class GameActivity extends Activity
         gridView.setAdapter(grid);
         
         gridView.setOnItemClickListener(cardClickedHandler);
+        dealCards(false);
         updateUI();
     }
     
@@ -84,25 +85,25 @@ public class GameActivity extends Activity
     }
     
     public void onButtonThric3Player1(View view) {
-        onButtonThric3(0);
+        onButtonThric3(players.get(0));
     }
     
     public void onButtonThric3Player2(View view) {
-        onButtonThric3(1);
+        onButtonThric3(players.get(1));
     }
     
     public void onButtonThric3Player3(View view) {
-        onButtonThric3(2);
+        onButtonThric3(players.get(2));
     }
     
-    private void onButtonThric3(int playerIndex) {
-        if (players.get(playerIndex).isLocked()) {
+    private void onButtonThric3(Player buttonPlayer) {
+        if (buttonPlayer.isLocked()) {
             Toast.makeText(this, R.string.toast_locked, 2).show();
         } else {
-            if (activePlayerIndex == -1) {
-                activePlayerIndex = playerIndex;
+            if (activePlayer == null) {
+                activePlayer = buttonPlayer;
                 Toast.makeText(this, R.string.toast_select_your_set, 2).show();
-            } else if (activePlayerIndex == playerIndex) {
+            } else if (activePlayer == buttonPlayer) {
                 for (Player player: players) {
                     player.unlock();
                 }
@@ -110,12 +111,12 @@ public class GameActivity extends Activity
                     Pile set = grid.getSelectedCards();
                     for (Card card: set) {
                         grid.remove(card);
-                        players.get(playerIndex).addCard(card);
+                        buttonPlayer.addCard(card);
                     }
                     Toast.makeText(this, R.string.toast_valid_set, 2).show();
                 } else {
                     if (players.size() > 1) {
-                        players.get(playerIndex).lock();
+                        buttonPlayer.lock();
                         Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
                     } else {
                         Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
@@ -123,7 +124,7 @@ public class GameActivity extends Activity
                         
                 }
                 grid.clearSelection();
-                activePlayerIndex = -1;
+                activePlayer = null;
                 updateUI();
             } else {
                 Toast.makeText(this, R.string.toast_not_your_turn, 2).show();
@@ -132,25 +133,31 @@ public class GameActivity extends Activity
     }
     
     public void onButtonDealCards(View view) {
-        if (activePlayerIndex == -1) {
-            int nr_of_cards_to_deal = 0;
-            int cards_in_game = grid.getCount();
-            if (cards_in_game < 12) {
-                nr_of_cards_to_deal = 12 - cards_in_game;
-            } else if (cards_in_game < 21) {
-                nr_of_cards_to_deal = 3;
-            }
-            for (int i=0; i < nr_of_cards_to_deal; i++) {
-                if (deck.size() > 0) {
-                    grid.add(deck.pop());
+        dealCards(true);
+    }
+    
+    private void dealCards(boolean force) {
+        int cards_in_game = grid.getCount();
+        if (force || cards_in_game < 12) {
+            if (activePlayer == null) {
+                int nr_of_cards_to_deal = 0;
+                if (cards_in_game < 12) {
+                    nr_of_cards_to_deal = 12 - cards_in_game;
+                } else if (cards_in_game < 21) {
+                    nr_of_cards_to_deal = 3;
                 }
+                for (int i=0; i < nr_of_cards_to_deal; i++) {
+                    if (deck.size() > 0) {
+                        grid.add(deck.pop());
+                    }
+                }
+                if (nr_of_cards_to_deal == 0) {
+                    Toast.makeText(this, R.string.toast_no_cards_left, 2).show();
+                }
+                updateUI();
+            } else {
+                Toast.makeText(this, R.string.toast_select_your_set, 2).show();
             }
-            if (nr_of_cards_to_deal == 0) {
-                Toast.makeText(this, R.string.toast_no_cards_left, 2).show();
-            }
-            updateUI();
-        } else {
-            Toast.makeText(this, R.string.toast_select_your_set, 2).show();
         }
     }
 }
