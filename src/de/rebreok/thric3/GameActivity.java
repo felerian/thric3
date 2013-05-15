@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 import android.widget.AdapterView.OnItemClickListener;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class GameActivity extends Activity
     private CardAdapter grid;
     private ArrayList<Player> players;
     private Player activePlayer;
+    private boolean tutorial;
     
     private OnItemClickListener cardClickedHandler = new OnItemClickListener() {
         public void onItemClick(AdapterView parent, View v, int position, long id) {
@@ -39,8 +41,13 @@ public class GameActivity extends Activity
         Resources res = getResources();
         players = new ArrayList<Player>();
         activePlayer = null;
-        switch (getIntent().getIntExtra(MainActivity.GAME_MODE, -1))
+        switch (getIntent().getIntExtra(MainActivity.GAME_MODE, -2))
         {
+            case MainActivity.MODE_TUTORIAL:
+                setContentView(R.layout.game1);
+                players.add(new Player(res.getString(R.string.name_player1)));
+                tutorial = true;
+                break;
             case MainActivity.MODE_1P:
                 setContentView(R.layout.game1);
                 players.add(new Player(res.getString(R.string.name_player1)));
@@ -55,6 +62,13 @@ public class GameActivity extends Activity
                 players.add(new Player(res.getString(R.string.name_player1)));
                 players.add(new Player(res.getString(R.string.name_player2)));
                 players.add(new Player(res.getString(R.string.name_player3)));
+                break;
+            case MainActivity.MODE_4P:
+                setContentView(R.layout.game4);
+                players.add(new Player(res.getString(R.string.name_player1)));
+                players.add(new Player(res.getString(R.string.name_player2)));
+                players.add(new Player(res.getString(R.string.name_player3)));
+                players.add(new Player(res.getString(R.string.name_player4)));
                 break;
         }
         
@@ -82,53 +96,86 @@ public class GameActivity extends Activity
             playerScore = (TextView) findViewById(R.id.text_score_player3);
             playerScore.setText(String.valueOf(players.get(2).getScore()));
         }
+        if (players.size() > 3) {
+            playerScore = (TextView) findViewById(R.id.text_score_player4);
+            playerScore.setText(String.valueOf(players.get(3).getScore()));
+        }
     }
     
     public void onButtonThric3Player1(View view) {
-        onButtonThric3(players.get(0));
+        Player buttonPlayer = players.get(0);
+        if (buttonPlayer.isLocked()) {
+            ToggleButton button = (ToggleButton) findViewById(R.id.button_player1);
+            button.setChecked(false);
+            Toast.makeText(this, R.string.toast_locked, 2).show();
+        } else {
+            onButtonThric3(buttonPlayer);
+        }
     }
     
     public void onButtonThric3Player2(View view) {
-        onButtonThric3(players.get(1));
+        Player buttonPlayer = players.get(1);
+        if (buttonPlayer.isLocked()) {
+            ToggleButton button = (ToggleButton) findViewById(R.id.button_player2);
+            button.setChecked(false);
+            Toast.makeText(this, R.string.toast_locked, 2).show();
+        } else {
+            onButtonThric3(buttonPlayer);
+        }
     }
     
     public void onButtonThric3Player3(View view) {
-        onButtonThric3(players.get(2));
+        Player buttonPlayer = players.get(2);
+        if (buttonPlayer.isLocked()) {
+            ToggleButton button = (ToggleButton) findViewById(R.id.button_player3);
+            button.setChecked(false);
+            Toast.makeText(this, R.string.toast_locked, 2).show();
+        } else {
+            onButtonThric3(buttonPlayer);
+        }
+    }
+    
+    public void onButtonThric3Player4(View view) {
+        Player buttonPlayer = players.get(3);
+        if (buttonPlayer.isLocked()) {
+            ToggleButton button = (ToggleButton) findViewById(R.id.button_player4);
+            button.setChecked(false);
+            Toast.makeText(this, R.string.toast_locked, 2).show();
+        } else {
+            onButtonThric3(buttonPlayer);
+        }
     }
     
     private void onButtonThric3(Player buttonPlayer) {
-        if (buttonPlayer.isLocked()) {
-            Toast.makeText(this, R.string.toast_locked, 2).show();
-        } else {
-            if (activePlayer == null) {
-                activePlayer = buttonPlayer;
-                Toast.makeText(this, R.string.toast_select_your_set, 2).show();
-            } else if (activePlayer == buttonPlayer) {
-                for (Player player: players) {
-                    player.unlock();
-                }
-                if (grid.getSelectedCards().isValidSet()) {
-                    Pile set = grid.getSelectedCards();
-                    for (Card card: set) {
-                        grid.remove(card);
-                        buttonPlayer.addCard(card);
-                    }
-                    Toast.makeText(this, R.string.toast_valid_set, 2).show();
-                } else {
-                    if (players.size() > 1) {
-                        buttonPlayer.lock();
-                        Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
-                    } else {
-                        Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
-                    }
-                        
-                }
-                grid.clearSelection();
-                activePlayer = null;
-                updateUI();
-            } else {
-                Toast.makeText(this, R.string.toast_not_your_turn, 2).show();
+        if (activePlayer == null) {
+            activePlayer = buttonPlayer;
+            Toast.makeText(this, R.string.toast_select_your_set, 2).show();
+        } else if (activePlayer == buttonPlayer) {
+            for (Player player: players) {
+                player.unlock();
             }
+            if (grid.getSelectedCards().isValidSet()) {
+                Pile set = grid.getSelectedCards();
+                for (Card card: set) {
+                    grid.remove(card);
+                    buttonPlayer.addCard(card);
+                }
+                Toast.makeText(this, R.string.toast_valid_set, 2).show();
+            } else {
+                if (players.size() > 1) {
+                    buttonPlayer.lock();
+                    Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
+                } else {
+                    Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
+                }
+                    
+            }
+            grid.clearSelection();
+            activePlayer = null;
+            dealCards(false);
+            updateUI();
+        } else {
+            Toast.makeText(this, R.string.toast_not_your_turn, 2).show();
         }
     }
     
@@ -146,13 +193,13 @@ public class GameActivity extends Activity
                 } else if (cards_in_game < 21) {
                     nr_of_cards_to_deal = 3;
                 }
+                if (deck.size() == 0) {
+                    Toast.makeText(this, R.string.toast_no_cards_left, 2).show();
+                }
                 for (int i=0; i < nr_of_cards_to_deal; i++) {
                     if (deck.size() > 0) {
                         grid.add(deck.pop());
                     }
-                }
-                if (nr_of_cards_to_deal == 0) {
-                    Toast.makeText(this, R.string.toast_no_cards_left, 2).show();
                 }
                 updateUI();
             } else {

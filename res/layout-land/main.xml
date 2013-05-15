@@ -28,22 +28,30 @@
             android:gravity="center"
             >
             <Button
-                android:onClick="onButton1Player"
+                android:onClick="onButtonTutorial"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_1player"
+                android:text="@string/button_tutorial"
+                android:enabled="false"
                 />
             <Button
-                android:onClick="onButton2Players"
+                android:onClick="onButtonSolitaire"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_2players"
+                android:text="@string/button_solitaire"
                 />
             <Button
-                android:onClick="onButton3Players"
+                android:onClick="onButtonMultiplayer"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_3players"
+                android:text="@string/button_multiplayer"
+                />
+            <Button
+                android:onClick="onButtonVsAi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_vs_ai"
+                android:enabled="false"
                 />
             <Button
                 android:onClick="onButtonHelp"
