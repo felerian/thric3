@@ -28,15 +28,6 @@
                 android:textStyle="bold"
                 android:textColor="#ff0000c8"
                 android:background="@drawable/button_thric3_2"
-                android:layout_marginBottom="10dp"
-                />
-            <TextView
-                android:id="@+id/text_score_player2"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="-"
-                android:gravity="center"
                 />
         </LinearLayout>
         <Space
@@ -49,14 +40,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             >
-            <TextView
-                android:id="@+id/text_score_player3"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="-"
-                android:gravity="center"
-                />
             <ToggleButton
                 android:id="@+id/button_player3"
                 android:onClick="onButtonThric3Player3"
@@ -69,7 +52,6 @@
                 android:textStyle="bold"
                 android:textColor="#ff008c5c"
                 android:background="@drawable/button_thric3_3"
-                android:layout_marginTop="10dp"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -107,15 +89,6 @@
                 android:textStyle="bold"
                 android:textColor="#ffb47d14"
                 android:background="@drawable/button_thric3_4"
-                android:layout_marginBottom="10dp"
-                />
-            <TextView
-                android:id="@+id/text_score_player4"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="-"
-                android:gravity="center"
                 />
         </LinearLayout>
         <Space
@@ -154,14 +127,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             >
-            <TextView
-                android:id="@+id/text_score_player1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="-"
-                android:gravity="center"
-                />
             <ToggleButton
                 android:id="@+id/button_player1"
                 android:onClick="onButtonThric3Player1"
@@ -174,7 +139,6 @@
                 android:textStyle="bold"
                 android:textColor="#ffc80000"
                 android:background="@drawable/button_thric3_1"
-                android:layout_marginTop="10dp"
                 />
         </LinearLayout>
     </LinearLayout>

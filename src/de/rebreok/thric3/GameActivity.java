@@ -88,20 +88,9 @@ public class GameActivity extends Activity
     private void updateUI() {
         TextView cardsLeft = (TextView) findViewById(R.id.text_cards_left);
         cardsLeft.setText(String.valueOf(deck.size()));
-        TextView playerScore;
-        playerScore = (TextView) findViewById(R.id.text_score_player1);
-        playerScore.setText(String.valueOf(players.get(0).getScore()));
-        if (players.size() > 1) {
-            playerScore = (TextView) findViewById(R.id.text_score_player2);
-            playerScore.setText(String.valueOf(players.get(1).getScore()));
-        }
-        if (players.size() > 2) {
-            playerScore = (TextView) findViewById(R.id.text_score_player3);
-            playerScore.setText(String.valueOf(players.get(2).getScore()));
-        }
-        if (players.size() > 3) {
-            playerScore = (TextView) findViewById(R.id.text_score_player4);
-            playerScore.setText(String.valueOf(players.get(3).getScore()));
+        if (players.size() == 1) {
+            TextView playerScore = (TextView) findViewById(R.id.text_score_player1);
+            playerScore.setText(String.valueOf(players.get(0).getScore()));
         }
     }
     

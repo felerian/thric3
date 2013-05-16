@@ -28,8 +28,7 @@ public class MainActivity extends Activity
     }
     
     public void onButtonTutorial(View view) {
-        Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra(GAME_MODE, MODE_TUTORIAL);
+        Intent intent = new Intent(this, TutorialActivity.class);
         startActivity(intent);
     }
     

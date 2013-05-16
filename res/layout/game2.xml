@@ -30,21 +30,6 @@
                 android:textStyle="bold"
                 android:textColor="#ff0000c8"
                 android:background="@drawable/button_thric3_2"
-                android:layout_marginBottom="10dp"
-                />
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_score"
-                android:gravity="center"
-                />
-            <TextView
-                android:id="@+id/text_score_player2"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="-"
-                android:gravity="center"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -101,20 +86,6 @@
             android:layout_weight="1"
             android:layout_gravity="bottom"
             >
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_score"
-                android:gravity="center"
-                />
-            <TextView
-                android:id="@+id/text_score_player1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="-"
-                android:gravity="center"
-                />
             <ToggleButton
                 android:id="@+id/button_player1"
                 android:onClick="onButtonThric3Player1"
@@ -127,7 +98,6 @@
                 android:textStyle="bold"
                 android:textColor="#ffc80000"
                 android:background="@drawable/button_thric3_1"
-                android:layout_marginTop="10dp"
                 />
         </LinearLayout>
     </LinearLayout>

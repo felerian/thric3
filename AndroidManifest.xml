@@ -13,6 +13,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="TutorialActivity"
+                  android:icon="@drawable/logo"
+                  android:label="@string/manual_title"
+                  android:screenOrientation="landscape">
+        </activity>
         <activity android:name="GameActivity"
                   android:screenOrientation="landscape"
                   android:theme="@android:style/Theme.Holo.NoActionBar">
