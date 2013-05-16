@@ -1,13 +1,16 @@
 package de.rebreok.thric3;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -149,8 +152,11 @@ public class GameActivity extends Activity
     private void onButtonThric3(Player buttonPlayer) {
         if (activePlayer == null) {
             activePlayer = buttonPlayer;
-            Toast.makeText(this, R.string.toast_select_your_set, 2).show();
+            if (tutorial)
+                Toast.makeText(this, R.string.toast_select_your_set, 2).show();
         } else if (activePlayer == buttonPlayer) {
+            if (tutorial)
+                onTutorialSetDone(grid.getSelectedCards().isValidSet());
             for (Player player: players) {
                 player.unlock();
             }
@@ -160,13 +166,16 @@ public class GameActivity extends Activity
                     grid.remove(card);
                     buttonPlayer.addCard(card);
                 }
-                Toast.makeText(this, R.string.toast_valid_set, 2).show();
+                if (!tutorial)
+                    Toast.makeText(this, R.string.toast_valid_set, 2).show();
             } else {
                 if (players.size() > 1) {
                     buttonPlayer.lock();
-                    Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
+                    if (!tutorial)
+                        Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
                 } else {
-                    Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
+                    if (!tutorial)
+                        Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
                 }
                     
             }
@@ -206,5 +215,37 @@ public class GameActivity extends Activity
                 Toast.makeText(this, R.string.toast_select_your_set, 2).show();
             }
         }
+    }
+    
+    private void onTutorialSetDone(boolean correct) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        if (correct) {
+            builder.setTitle(R.string.tutorial_dialog_title_set_correct);
+        } else {
+            builder.setTitle(R.string.tutorial_dialog_title_set_wrong);
+        }
+        LinearLayout vbox = new LinearLayout(this);
+        vbox.setPadding(20, 20, 20, 20);
+        vbox.setOrientation(LinearLayout.VERTICAL);
+        builder.setView(vbox);
+        LinearLayout hbox = new LinearLayout(this);
+        hbox.setOrientation(LinearLayout.HORIZONTAL);
+        hbox.setGravity(Gravity.CENTER);
+        for (Card card: grid.getSelectedCards()) {
+            hbox.addView(new CardView(this, card, false), new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 200, 0));
+        }
+        vbox.addView(hbox, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+        TextView comment = new TextView(this);
+        comment.setPadding(20, 20, 20, 20);
+        vbox.addView(comment);
+        if (correct) {
+            builder.setTitle(R.string.tutorial_dialog_title_set_correct);
+            comment.setText(R.string.tutorial_explanation_set_correct);
+        } else {
+            builder.setTitle(R.string.tutorial_dialog_title_set_wrong);
+            comment.setText(R.string.tutorial_explanation_set_wrong);
+        }
+        builder.setPositiveButton(R.string.ok, null);
+        builder.create().show();
     }
 }

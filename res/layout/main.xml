@@ -20,7 +20,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         >
-<!--
         <Button
             android:onClick="onButtonTutorial"
             android:layout_width="fill_parent"
@@ -31,9 +30,7 @@
             android:layout_margin="10dp"
             android:padding="20dp"
             android:background="@drawable/card_front"
-            android:enabled="false"
             />
--->
         <Button
             android:onClick="onButtonSolitaire"
             android:layout_width="fill_parent"
@@ -67,7 +64,6 @@
             android:layout_margin="10dp"
             android:padding="20dp"
             android:background="@drawable/card_front"
-            android:enabled="false"
             />
 -->
     </LinearLayout>

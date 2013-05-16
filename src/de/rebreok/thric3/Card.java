@@ -31,6 +31,16 @@ class Card {
 		this.number = number;
 		this.filling = filling;
 	}
+    
+    /**
+	 * Creates a dummy card.
+	 */
+	public Card() {
+		this.color = Color.GREEN;
+		this.shape = Shape.CLUBS;
+		this.number = Number.THREE;
+		this.filling = Filling.HALF;
+	}
 
 	/**
 	 * Returns the card's color.

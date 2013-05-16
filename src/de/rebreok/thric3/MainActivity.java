@@ -27,11 +27,11 @@ public class MainActivity extends Activity
         setContentView(R.layout.main);
     }
     
-    //~ public void onButtonTutorial(View view) {
-        //~ Intent intent = new Intent(this, GameActivity.class);
-        //~ intent.putExtra(GAME_MODE, MODE_TUTORIAL);
-        //~ startActivity(intent);
-    //~ }
+    public void onButtonTutorial(View view) {
+        Intent intent = new Intent(this, GameActivity.class);
+        intent.putExtra(GAME_MODE, MODE_TUTORIAL);
+        startActivity(intent);
+    }
     
     public void onButtonSolitaire(View view) {
         Intent intent = new Intent(this, GameActivity.class);

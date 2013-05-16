@@ -47,4 +47,11 @@ class Pile extends HashSet<Card>{
 		// Everything is fine:
 		return true;
 	}
+    
+    /**
+	 * Check if this pile contains any valid Set, according to the rules
+	 */
+    public boolean containsValidSet() {
+        return true; //TODO
+    }
 }
