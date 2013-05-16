@@ -13,17 +13,19 @@ public class CardView extends LinearLayout {
     
     private final static int DEFAULT_WIDTH = 120;
     private final static float ASPECT_RATIO = 1.5f;
+    private Context context;
     private Card card;
+    private boolean selected;
+    
+    public Card getCard() {
+        return card;
+    }
     
     public CardView(Context context, Card card, boolean selected) {
         super(context);
+        this.context = context;
         this.card = card;
-        
-        if (selected) {
-            setBackground(context.getResources().getDrawable(R.drawable.card_front_selected));
-        } else {
-            setBackground(context.getResources().getDrawable(R.drawable.card_front));
-        }
+        setSelection(selected);
         setOrientation(VERTICAL);
         setGravity(Gravity.CENTER);
         LinearLayout.LayoutParams params;
@@ -81,6 +83,19 @@ public class CardView extends LinearLayout {
                     addView(symbol);
                 }
         }
+    }
+    
+    public void setSelection(boolean selected) {
+        this.selected = selected;
+        if (selected) {
+            setBackground(context.getResources().getDrawable(R.drawable.card_front_selected));
+        } else {
+            setBackground(context.getResources().getDrawable(R.drawable.card_front));
+        }
+    }
+    
+    public boolean isSelected() {
+        return selected;
     }
     
     @Override
