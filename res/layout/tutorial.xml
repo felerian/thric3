@@ -37,7 +37,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/card_back"
+                android:src="@drawable/hearts_red_empty"
                 android:layout_margin="10dp"
                 />
             <TextView
@@ -55,7 +55,25 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/button_thric3_2_normal"
+                android:src="@drawable/diamonds_blue_full"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manual_properties"
+                android:layout_margin="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/manual_valid_set"
                 android:layout_margin="10dp"
                 />
             <TextView
@@ -79,9 +97,9 @@
             android:layout_height="wrap_content"
             >
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/button_thric3_3_normal"
+                android:src="@drawable/manual_invalid_set"
                 android:layout_margin="10dp"
                 />
             <TextView
@@ -99,7 +117,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/button_thric3_1_normal"
+                android:src="@drawable/manual_button_set"
                 android:layout_margin="10dp"
                 />
             <TextView

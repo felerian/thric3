@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="deal_cards.svg"
-   inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_deal_cards_pressed.png"
-   inkscape:export-xdpi="34.229172"
-   inkscape:export-ydpi="34.229172">
+   inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_deal_cards_normal.png"
+   inkscape:export-xdpi="25.671911"
+   inkscape:export-ydpi="25.671911">
   <defs
      id="defs3030">
     <linearGradient
@@ -301,15 +301,6 @@
          stdDeviation="2.6881906"
          id="feGaussianBlur3894" />
     </filter>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3865"
-       id="linearGradient3863"
-       x1="-93.174103"
-       y1="-99.066383"
-       x2="72.913109"
-       y2="-99.066383"
-       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -319,8 +310,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.6233981"
-     inkscape:cx="-23.813142"
-     inkscape:cy="36.645967"
+     inkscape:cx="225.62618"
+     inkscape:cy="33.437744"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -343,7 +334,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -455,14 +446,14 @@
     <g
        id="g3896"
        transform="matrix(2.3285964,0,0,2.3285964,267.9492,388.43199)"
-       style="fill-opacity:1.0;fill:url(#linearGradient3863)">
+       style="fill-opacity:1;fill:#ffffff">
       <g
          transform="translate(0,-60)"
-         style="fill:url(#linearGradient3863);fill-opacity:1.0;filter:url(#filter3888)"
+         style="fill:#ffffff;fill-opacity:1;filter:url(#filter3888)"
          id="g3853">
         <path
            sodipodi:type="star"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            id="path3855"
            sodipodi:sides="3"
            sodipodi:cx="33.57143"
@@ -491,13 +482,13 @@
            sodipodi:cx="33.57143"
            sodipodi:sides="3"
            id="path3857"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="star"
            transform="matrix(0.58962803,0,0,1,-22.899019,33.571429)" />
         <path
            transform="matrix(0.58962803,0,0,1,22.271223,33.571429)"
            sodipodi:type="star"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            id="path3859"
            sodipodi:sides="3"
            sodipodi:cx="33.57143"
@@ -515,7 +506,7 @@
       <g
          transform="translate(0,-60)"
          id="g3866"
-         style="fill:url(#linearGradient3863);fill-opacity:1.0;filter:url(#filter3892)">
+         style="fill:#ffffff;fill-opacity:1;filter:url(#filter3892)">
         <path
            transform="matrix(0.58962803,0,0,1,-68.069261,33.571429)"
            inkscape:transform-center-x="7.0261338"
@@ -531,12 +522,12 @@
            sodipodi:cx="33.57143"
            sodipodi:sides="3"
            id="path3868"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="star" />
         <path
            transform="matrix(0.58962803,0,0,1,-22.899019,33.571429)"
            sodipodi:type="star"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            id="path3870"
            sodipodi:sides="3"
            sodipodi:cx="33.57143"
@@ -564,14 +555,14 @@
            sodipodi:cx="33.57143"
            sodipodi:sides="3"
            id="path3872"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="star"
            transform="matrix(0.58962803,0,0,1,22.271223,33.571429)" />
       </g>
       <g
          transform="translate(0,-60)"
          id="g3848"
-         style="fill-opacity:1.0;fill:url(#linearGradient3863)">
+         style="fill-opacity:1;fill:#ffffff">
         <path
            transform="matrix(0.58962803,0,0,1,-68.069261,33.571429)"
            inkscape:transform-center-x="7.0261338"
@@ -587,12 +578,12 @@
            sodipodi:cx="33.57143"
            sodipodi:sides="3"
            id="path3827"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="star" />
         <path
            transform="matrix(0.58962803,0,0,1,-22.899019,33.571429)"
            sodipodi:type="star"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            id="path3829"
            sodipodi:sides="3"
            sodipodi:cx="33.57143"
@@ -620,7 +611,7 @@
            sodipodi:cx="33.57143"
            sodipodi:sides="3"
            id="path3831"
-           style="fill:url(#linearGradient3863);fill-opacity:1.0;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.61444759000000015;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
            sodipodi:type="star"
            transform="matrix(0.58962803,0,0,1,22.271223,33.571429)" />
       </g>

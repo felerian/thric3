@@ -22,6 +22,7 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             >
             <ImageView
                 android:onClick="onButtonDealCards"
@@ -52,8 +53,9 @@
             />
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             >
             <TextView
                 android:layout_width="fill_parent"
@@ -72,16 +74,13 @@
             <ToggleButton
                 android:id="@+id/button_player1"
                 android:onClick="onButtonThric3Player1"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textOn="@string/button_done"
-                android:textOff="@string/button_set"
-                android:textSize="30dp"
-                android:fontFamily="serif"
-                android:textStyle="bold"
-                android:textColor="#ffc80000"
-                android:background="@drawable/button_thric3_1"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/button_player1"
                 android:layout_marginTop="10dp"
+                android:layout_gravity="center"
                 />
         </LinearLayout>
     </LinearLayout>

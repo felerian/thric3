@@ -23,26 +23,32 @@
                 android:onClick="onButtonThric3Player2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textOn="@string/button_done"
-                android:textOff="@string/button_set"
-                android:textSize="30dp"
-                android:fontFamily="serif"
-                android:textStyle="bold"
-                android:textColor="#ff0000c8"
-                android:background="@drawable/button_thric3_2"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/button_player2"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_score"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/text_score_player2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="-"
+                android:gravity="center"
                 />
         </LinearLayout>
     </LinearLayout>
-    <GridView
-        android:id="@+id/grid_view"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/grid_container"
+        android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:verticalSpacing="5dp"
-        android:horizontalSpacing="5dp"
-        android:stretchMode="spacingWidth"
-        android:numColumns="7"
         />
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
@@ -53,8 +59,7 @@
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:gravity="top"
             >
             <ImageView
@@ -79,25 +84,39 @@
                 android:gravity="center"
                 />
         </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_score"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/text_score_player1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="-"
+                android:gravity="center"
+                />
             <ToggleButton
                 android:id="@+id/button_player1"
                 android:onClick="onButtonThric3Player1"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textOn="@string/button_done"
-                android:textOff="@string/button_set"
-                android:textSize="30dp"
-                android:fontFamily="serif"
-                android:textStyle="bold"
-                android:textColor="#ffc80000"
-                android:background="@drawable/button_thric3_1"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/button_player1"
                 />
         </LinearLayout>
     </LinearLayout>
