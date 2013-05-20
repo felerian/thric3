@@ -2,6 +2,7 @@ package de.rebreok.thric3;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.GridView;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,20 +23,10 @@ import java.util.ArrayList;
 public class GameActivity extends Activity
 {
     private Deck deck;
-    private CardAdapter grid;
+    private CardGrid grid;
     private ArrayList<Player> players;
     private Player activePlayer;
     private boolean tutorial;
-    
-    private OnItemClickListener cardClickedHandler = new OnItemClickListener() {
-        public void onItemClick(AdapterView parent, View v, int position, long id) {
-            if (activePlayer == null) {
-                Toast.makeText(v.getContext(), R.string.toast_call_set_first, 2).show();
-            } else {
-                grid.toggleSelection(position);
-            }
-        }
-    };
     
     /** Called when the activity is first created. */
     @Override
@@ -76,13 +68,18 @@ public class GameActivity extends Activity
         }
         
         deck = new Deck();
-        GridView gridView = (GridView) findViewById(R.id.grid_view);
-        grid = new CardAdapter(this);
-        gridView.setAdapter(grid);
-        
-        gridView.setOnItemClickListener(cardClickedHandler);
-        dealCards(false);
+        grid = new CardGrid(this);
+        LinearLayout gridContainer = (LinearLayout) findViewById(R.id.grid_container);
+        gridContainer.addView(grid, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT, 0));
         updateUI();
+    }
+    
+    public void onCardClick(CardView cardView) {
+        if (activePlayer == null) {
+            Toast.makeText(this, R.string.toast_call_set_first, 2).show();
+        } else {
+            grid.toggleSelection(cardView);
+        }
     }
     
     private void updateUI() {
@@ -141,6 +138,7 @@ public class GameActivity extends Activity
     private void onButtonThric3(Player buttonPlayer) {
         if (activePlayer == null) {
             activePlayer = buttonPlayer;
+            grid.setAcceptSelection(true);
             if (tutorial)
                 Toast.makeText(this, R.string.toast_select_your_set, 2).show();
         } else if (activePlayer == buttonPlayer) {
@@ -170,11 +168,17 @@ public class GameActivity extends Activity
             }
             grid.clearSelection();
             activePlayer = null;
+            grid.setAcceptSelection(false);
             dealCards(false);
             updateUI();
         } else {
             Toast.makeText(this, R.string.toast_not_your_turn, 2).show();
         }
+    }
+    
+    private void setActivePlayer(Player player) {
+        activePlayer = player;
+        grid.setAcceptSelection(player != null);
     }
     
     public void onButtonDealCards(View view) {
@@ -235,6 +239,23 @@ public class GameActivity extends Activity
             comment.setText(R.string.tutorial_explanation_set_wrong);
         }
         builder.setPositiveButton(R.string.ok, null);
+        builder.create().show();
+    }
+    
+    private void onGameOver() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.dialog_title_game_over);
+        builder.setCancelable(false);
+        builder.setPositiveButton(R.string.button_replay, new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                       finish();
+                   }
+               });
+        builder.setNegativeButton(R.string.button_back_to_menu, new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                       finish();
+                   }
+               });
         builder.create().show();
     }
 }
