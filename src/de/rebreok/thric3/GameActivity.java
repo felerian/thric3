@@ -232,6 +232,75 @@ public class GameActivity extends Activity
         } else {
             builder.setTitle(R.string.tutorial_dialog_title_set_wrong);
             comment.setText(R.string.tutorial_explanation_set_wrong);
+            
+            LinearLayout hbox_colors = new LinearLayout(this);
+            TextView label_colors = new TextView(this);
+            label_colors.setGravity(Gravity.RIGHT);
+            label_colors.setPadding(0, 0, 10, 0);
+            label_colors.setText(R.string.tutorial_colors);
+            TextView comment_colors = new TextView(this);
+            if (grid.getSelectedCards().getColorCount() == 2) {
+                comment_colors.setText(R.string.tutorial_not_ok);
+                comment_colors.setTextColor(Color.RED);
+            } else {
+                comment_colors.setText(R.string.tutorial_ok);
+                comment_colors.setTextColor(Color.GREEN);
+            }
+            hbox_colors.addView(label_colors, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            hbox_colors.addView(comment_colors, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            vbox.addView(hbox_colors);
+            
+            LinearLayout hbox_shapes = new LinearLayout(this);
+            TextView label_shapes = new TextView(this);
+            label_shapes.setGravity(Gravity.RIGHT);
+            label_shapes.setPadding(0, 0, 10, 0);
+            label_shapes.setText(R.string.tutorial_shapes);
+            TextView comment_shapes = new TextView(this);
+            if (grid.getSelectedCards().getShapeCount() == 2) {
+                comment_shapes.setText(R.string.tutorial_not_ok);
+                comment_shapes.setTextColor(Color.RED);
+            } else {
+                comment_shapes.setText(R.string.tutorial_ok);
+                comment_shapes.setTextColor(Color.GREEN);
+            }
+            hbox_shapes.addView(label_shapes, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            hbox_shapes.addView(comment_shapes, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            vbox.addView(hbox_shapes);
+            
+            LinearLayout hbox_numbers = new LinearLayout(this);
+            TextView label_numbers = new TextView(this);
+            label_numbers.setGravity(Gravity.RIGHT);
+            label_numbers.setPadding(0, 0, 10, 0);
+            label_numbers.setText(R.string.tutorial_numbers);
+            TextView comment_numbers = new TextView(this);
+            if (grid.getSelectedCards().getNumberCount() == 2) {
+                comment_numbers.setText(R.string.tutorial_not_ok);
+                comment_numbers.setTextColor(Color.RED);
+            } else {
+                comment_numbers.setText(R.string.tutorial_ok);
+                comment_numbers.setTextColor(Color.GREEN);
+            }
+            hbox_numbers.addView(label_numbers, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            hbox_numbers.addView(comment_numbers, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            vbox.addView(hbox_numbers);
+            
+            LinearLayout hbox_fillings = new LinearLayout(this);
+            TextView label_fillings = new TextView(this);
+            label_fillings.setGravity(Gravity.RIGHT);
+            label_fillings.setPadding(0, 0, 10, 0);
+            label_fillings.setText(R.string.tutorial_fillings);
+            TextView comment_fillings = new TextView(this);
+            if (grid.getSelectedCards().getFillingCount() == 2) {
+                comment_fillings.setText(R.string.tutorial_not_ok);
+                comment_fillings.setTextColor(Color.RED);
+            } else {
+                comment_fillings.setText(R.string.tutorial_ok);
+                comment_fillings.setTextColor(Color.GREEN);
+            }
+            hbox_fillings.addView(label_fillings, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            hbox_fillings.addView(comment_fillings, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+            vbox.addView(hbox_fillings);
+            
         }
         builder.setPositiveButton(R.string.ok, null);
         builder.create().show();
@@ -281,7 +350,6 @@ public class GameActivity extends Activity
             hbox.addView(icon_left, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 50, 0));
             
             TextView playerName = new TextView(this);
-            //~ playerName.setGravity(Gravity.LEFT);
             playerName.setPadding(20, 20, 20, 20);
             playerName.setText(player.getName());
             playerName.setTextSize(20);
