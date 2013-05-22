@@ -39,7 +39,8 @@
     <string name="manual_call">If you have found a SET, press the SET button and select the cards of the SET you found. Then press the button again to confirm.</string>
     <string name="manual_deal">If you cannot find any SET, press this button to deal three additional cards. Up to 21 cards can be in the game at the same time. 21 cards always contain at least one SET.</string>
     <string name="manual_title">Manual</string>
-    <string name="dialog_title_game_over">Game Over</string>
+    <string name="dialog_game_over_title">Game Over</string>
+    <string name="dialog_game_over_text">There are no valid SETs left in the game. Final Score:</string>
     <string name="button_back_to_menu">Back to Menu</string>
     <string name="button_replay">Play Again</string>
 </resources>

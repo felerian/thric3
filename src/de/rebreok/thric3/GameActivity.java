@@ -5,13 +5,16 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.Space;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -193,6 +196,7 @@ public class GameActivity extends Activity
                 Toast.makeText(this, R.string.toast_select_your_set, 2).show();
             }
         }
+        checkForGameOver();
     }
     
     private void checkForGameOver() {
@@ -235,13 +239,67 @@ public class GameActivity extends Activity
     
     private void onGameOver() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.dialog_title_game_over);
+        builder.setTitle(R.string.dialog_game_over_title);
         builder.setCancelable(false);
-        builder.setPositiveButton(R.string.button_replay, new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int id) {
-                       finish();
-                   }
-               });
+        
+        LinearLayout vbox = new LinearLayout(this);
+        vbox.setPadding(20, 20, 20, 20);
+        vbox.setOrientation(LinearLayout.VERTICAL);
+        builder.setView(vbox);
+        
+        TextView message = new TextView(this);
+        message.setPadding(20, 20, 20, 20);
+        message.setText(R.string.dialog_game_over_text);
+        vbox.addView(message);
+        
+        for (Player player: players) {
+            LinearLayout hbox = new LinearLayout(this);
+            hbox.setOrientation(LinearLayout.HORIZONTAL);
+            hbox.setGravity(Gravity.CENTER_VERTICAL);
+            vbox.addView(hbox, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT, 0));
+            
+            ImageView icon_left = new ImageView(this);
+            ImageView icon_right = new ImageView(this);
+            switch (players.indexOf(player)) {
+                case 0:
+                    icon_left.setImageResource(R.drawable.button_player1_normal);
+                    icon_right.setImageResource(R.drawable.button_player1_normal);
+                    break;
+                case 1:
+                    icon_left.setImageResource(R.drawable.button_player2_normal);
+                    icon_right.setImageResource(R.drawable.button_player2_normal);
+                    break;
+                case 2:
+                    icon_left.setImageResource(R.drawable.button_player3_normal);
+                    icon_right.setImageResource(R.drawable.button_player3_normal);
+                    break;
+                case 3:
+                    icon_left.setImageResource(R.drawable.button_player4_normal);
+                    icon_right.setImageResource(R.drawable.button_player4_normal);
+                    break;
+            }
+            hbox.addView(icon_left, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 50, 0));
+            
+            TextView playerName = new TextView(this);
+            //~ playerName.setGravity(Gravity.LEFT);
+            playerName.setPadding(20, 20, 20, 20);
+            playerName.setText(player.getName());
+            playerName.setTextSize(20);
+            hbox.addView(playerName, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0));
+            
+            Space space = new Space(this);
+            hbox.addView(space, new LinearLayout.LayoutParams(0, 0, 1));
+            
+            TextView playerScore = new TextView(this);
+            playerName.setGravity(Gravity.RIGHT);
+            playerScore.setPadding(20, 20, 20, 20);
+            playerScore.setText(String.valueOf(player.getScore()));
+            playerScore.setTextSize(20);
+            hbox.addView(playerScore, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0));
+            
+            hbox.addView(icon_right, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 50, 0));
+        }
+        
         builder.setNegativeButton(R.string.button_back_to_menu, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
                        finish();

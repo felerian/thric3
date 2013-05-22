@@ -18,11 +18,16 @@ class Deck extends Stack<Card> {
 			for (Card.Shape s : Card.Shape.values()) {
 				for (Card.Number n : Card.Number.values()) {
 					for (Card.Filling f : Card.Filling.values()) {
-						add(new Card(c,s,n,f));
+						add(new Card(c, s, n, f));
 					}
 				}
 			}
 		}
+		//~ for (Card.Color c : Card.Color.values()) {
+			//~ for (Card.Shape s : Card.Shape.values()) {
+						//~ add(new Card(c, s, Card.Number.TWO, Card.Filling.HALF));
+			//~ }
+		//~ }
 		Collections.shuffle(this);
 	}
 }

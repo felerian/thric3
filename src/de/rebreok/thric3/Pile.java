@@ -59,7 +59,7 @@ class Pile extends HashSet<Card>{
                     pile.add(card1);
                     pile.add(card2);
                     pile.add(card3);
-                    if (pile.isValidSet())
+                    if (pile.size() == 3 && pile.isValidSet())
                         return true;
                 }
             }
