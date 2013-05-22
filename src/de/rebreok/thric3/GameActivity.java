@@ -195,6 +195,12 @@ public class GameActivity extends Activity
         }
     }
     
+    private void checkForGameOver() {
+        if (deck.size() == 0 && grid.getCount() < 21 && !grid.getAllCards().containsValidSet()) {
+            onGameOver();
+        }
+    }
+    
     private void onTutorialConfirmSet(boolean correct) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         if (correct) {

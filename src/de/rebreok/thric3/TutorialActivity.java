@@ -1,12 +1,9 @@
 package de.rebreok.thric3;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 
 public class TutorialActivity extends Activity

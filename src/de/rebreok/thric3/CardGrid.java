@@ -52,6 +52,15 @@ public class CardGrid extends GridLayout {
         return result;
     }
     
+    public Pile getAllCards() {
+        Pile result = new Pile();
+        for (int i=0; i<getChildCount(); i++) {
+            CardView cardView = (CardView) getChildAt(i);
+            result.add(cardView.getCard());
+        }
+        return result;
+    }
+    
     public void setAcceptSelection(boolean accept) {
         accept_selection = accept;
     }

@@ -52,6 +52,18 @@ class Pile extends HashSet<Card>{
 	 * Check if this pile contains any valid Set, according to the rules
 	 */
     public boolean containsValidSet() {
-        return true; //TODO
+        for (Card card1: this) {
+            for (Card card2: this) {
+                for (Card card3: this) {
+                    Pile pile = new Pile();
+                    pile.add(card1);
+                    pile.add(card2);
+                    pile.add(card3);
+                    if (pile.isValidSet())
+                        return true;
+                }
+            }
+        }
+        return false;
     }
 }
