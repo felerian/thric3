@@ -11,12 +11,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.GridView;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
-import android.widget.AdapterView.OnItemClickListener;
 
 import java.util.ArrayList;
 
@@ -101,106 +99,71 @@ public class GameActivity extends Activity
         }
     }
     
-    public void onButtonThric3Player1(View view) {
-        Player buttonPlayer = players.get(0);
-        if (buttonPlayer.isLocked()) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player1);
+    public void onButtonSet(View view) {
+        ToggleButton button = (ToggleButton) view;
+        Player player;
+        if (view == findViewById(R.id.button_player1)) {
+            player = players.get(0);
+        } else if (view == findViewById(R.id.button_player2)) {
+            player = players.get(1);
+        } else if (view == findViewById(R.id.button_player3)) {
+            player = players.get(2);
+        } else {
+            player = players.get(3);
+        }
+        if (player.isLocked()) { // Locked player tries to call SET:
             button.setChecked(false);
             Toast.makeText(this, R.string.toast_locked, 2).show();
-        } else if (grid.getCount() == 0) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player1);
+        } else if (grid.getCount() == 0) { // Player tries to call SET with no cards on the table:
             button.setChecked(false);
-        } else {
-            onButtonThric3(buttonPlayer);
-        }
-    }
-    
-    public void onButtonThric3Player2(View view) {
-        Player buttonPlayer = players.get(1);
-        if (buttonPlayer.isLocked()) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player2);
-            button.setChecked(false);
-            Toast.makeText(this, R.string.toast_locked, 2).show();
-        } else if (grid.getCount() == 0) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player2);
-            button.setChecked(false);
-        } else {
-            onButtonThric3(buttonPlayer);
-        }
-    }
-    
-    public void onButtonThric3Player3(View view) {
-        Player buttonPlayer = players.get(2);
-        if (buttonPlayer.isLocked()) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player3);
-            button.setChecked(false);
-            Toast.makeText(this, R.string.toast_locked, 2).show();
-        } else if (grid.getCount() == 0) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player3);
-            button.setChecked(false);
-        } else {
-            onButtonThric3(buttonPlayer);
-        }
-    }
-    
-    public void onButtonThric3Player4(View view) {
-        Player buttonPlayer = players.get(3);
-        if (buttonPlayer.isLocked()) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player4);
-            button.setChecked(false);
-            Toast.makeText(this, R.string.toast_locked, 2).show();
-        } else if (grid.getCount() == 0) {
-            ToggleButton button = (ToggleButton) findViewById(R.id.button_player4);
-            button.setChecked(false);
-        } else {
-            onButtonThric3(buttonPlayer);
-        }
-    }
-    
-    private void onButtonThric3(Player buttonPlayer) {
-        if (activePlayer == null) {
-            activePlayer = buttonPlayer;
-            grid.setAcceptSelection(true);
-            if (tutorial)
-                Toast.makeText(this, R.string.toast_select_your_set, 2).show();
-        } else if (activePlayer == buttonPlayer) {
-            if (tutorial)
-                onTutorialSetDone(grid.getSelectedCards().isValidSet());
-            for (Player player: players) {
-                player.unlock();
-            }
-            if (grid.getSelectedCards().isValidSet()) {
-                Pile set = grid.getSelectedCards();
-                for (Card card: set) {
-                    grid.remove(card);
-                    buttonPlayer.addCard(card);
-                }
-                if (!tutorial)
-                    Toast.makeText(this, R.string.toast_valid_set, 2).show();
-            } else {
-                if (players.size() > 1) {
-                    buttonPlayer.lock();
-                    if (!tutorial)
-                        Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
-                } else {
-                    if (!tutorial)
-                        Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
-                }
-                    
-            }
-            grid.clearSelection();
-            activePlayer = null;
-            grid.setAcceptSelection(false);
-            dealCards(false);
-            updateUI();
-        } else {
+        } else if (activePlayer == null) { // Player calls SET:
+            callSet(player);
+        } else if (activePlayer != player) { // Wrong player tries to confirm SET:
             Toast.makeText(this, R.string.toast_not_your_turn, 2).show();
+            button.setChecked(false);
+        } else if (grid.getSelectedCards().size() != 3) { // Player tries to confirm SET with wrong number of cards:
+            Toast.makeText(this, R.string.toast_set_consists_of_three_cards, 2).show();
+            button.setChecked(true);
+        } else { // Player confirms SET:
+            confirmSet(player);
         }
     }
     
-    private void setActivePlayer(Player player) {
+    private void callSet(Player player) {
         activePlayer = player;
-        grid.setAcceptSelection(player != null);
+        grid.setAcceptSelection(true);
+        if (tutorial)
+            Toast.makeText(this, R.string.toast_select_your_set, 2).show();
+    }
+    
+    private void confirmSet(Player player) {
+        if (tutorial)
+            onTutorialConfirmSet(grid.getSelectedCards().isValidSet());
+        for (Player anyPlayer: players)
+            anyPlayer.unlock();
+        if (grid.getSelectedCards().isValidSet()) {
+            Pile set = grid.getSelectedCards();
+            for (Card card: set) {
+                grid.remove(card);
+                player.addCard(card);
+            }
+            if (!tutorial)
+                Toast.makeText(this, R.string.toast_valid_set, 2).show();
+        } else {
+            if (players.size() > 1) {
+                player.lock();
+                if (!tutorial)
+                    Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
+            } else {
+                if (!tutorial)
+                    Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
+            }
+        }
+        grid.clearSelection();
+        activePlayer = null;
+        grid.setAcceptSelection(false);
+        dealCards(false);
+        updateUI();
     }
     
     public void onButtonDealCards(View view) {
@@ -232,7 +195,7 @@ public class GameActivity extends Activity
         }
     }
     
-    private void onTutorialSetDone(boolean correct) {
+    private void onTutorialConfirmSet(boolean correct) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         if (correct) {
             builder.setTitle(R.string.tutorial_dialog_title_set_correct);

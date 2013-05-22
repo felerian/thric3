@@ -22,6 +22,7 @@
     <string name="toast_no_valid_set">That is no set</string>
     <string name="toast_no_valid_set_locked">That is no set, you are locked until the next Set has been called</string>
     <string name="toast_call_set_first">Call Set first</string>
+    <string name="toast_set_consists_of_three_cards">A SET consists of three cards</string>
     <string name="button_set">SET</string>
     <string name="button_done">Done</string>
     <string name="dialog_title_number_of_players">Number of Players</string>
