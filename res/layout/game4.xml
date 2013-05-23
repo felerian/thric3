@@ -18,7 +18,7 @@
             >
             <ToggleButton
                 android:id="@+id/button_player2"
-                android:onClick="onButtonSet"
+                android:onClick="onPlayerButton"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textOn=""
@@ -52,7 +52,7 @@
                 />
             <ToggleButton
                 android:id="@+id/button_player3"
-                android:onClick="onButtonSet"
+                android:onClick="onPlayerButton"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textOn=""
@@ -81,7 +81,7 @@
             >
             <ToggleButton
                 android:id="@+id/button_player4"
-                android:onClick="onButtonSet"
+                android:onClick="onPlayerButton"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textOn=""
@@ -140,7 +140,7 @@
                 />
             <ToggleButton
                 android:id="@+id/button_player1"
-                android:onClick="onButtonSet"
+                android:onClick="onPlayerButton"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textOn=""

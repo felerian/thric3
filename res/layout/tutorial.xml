@@ -77,14 +77,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/manual_valid_set"
+                android:text="@string/manual_valid"
                 android:layout_margin="10dp"
                 />
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/manual_valid_set"
+                android:src="@drawable/manual_valid"
                 android:layout_margin="10dp"
                 />
         </LinearLayout>
@@ -97,14 +97,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/manual_invalid_set"
+                android:text="@string/manual_invalid"
                 android:layout_margin="10dp"
                 />
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/manual_invalid_set"
+                android:src="@drawable/manual_invalid"
                 android:layout_margin="10dp"
                 />
         </LinearLayout>
@@ -124,7 +124,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/manual_button_set"
+                android:src="@drawable/manual_button"
                 android:layout_margin="10dp"
                 />
         </LinearLayout>

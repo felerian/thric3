@@ -1,3 +1,21 @@
+/**
+ * This file is part of Thric3.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * Copyright 2013 Kai Körber
+ */
 package de.rebreok.thric3;
 
 import android.app.Activity;
@@ -77,7 +95,7 @@ public class GameActivity extends Activity
     
     public void onCardClick(CardView cardView) {
         if (activePlayer == null) {
-            Toast.makeText(this, R.string.toast_call_set_first, 2).show();
+            Toast.makeText(this, R.string.toast_call_first, 2).show();
         } else {
             grid.toggleSelection(cardView);
         }
@@ -102,7 +120,7 @@ public class GameActivity extends Activity
         }
     }
     
-    public void onButtonSet(View view) {
+    public void onPlayerButton(View view) {
         ToggleButton button = (ToggleButton) view;
         Player player;
         if (view == findViewById(R.id.button_player1)) {
@@ -125,7 +143,7 @@ public class GameActivity extends Activity
             Toast.makeText(this, R.string.toast_not_your_turn, 2).show();
             button.setChecked(false);
         } else if (grid.getSelectedCards().size() != 3) { // Player tries to confirm SET with wrong number of cards:
-            Toast.makeText(this, R.string.toast_set_consists_of_three_cards, 2).show();
+            Toast.makeText(this, R.string.toast_consists_of_three_cards, 2).show();
             button.setChecked(true);
         } else { // Player confirms SET:
             confirmSet(player);
@@ -136,7 +154,7 @@ public class GameActivity extends Activity
         activePlayer = player;
         grid.setAcceptSelection(true);
         if (tutorial)
-            Toast.makeText(this, R.string.toast_select_your_set, 2).show();
+            Toast.makeText(this, R.string.toast_select, 2).show();
     }
     
     private void confirmSet(Player player) {
@@ -151,15 +169,15 @@ public class GameActivity extends Activity
                 player.addCard(card);
             }
             if (!tutorial)
-                Toast.makeText(this, R.string.toast_valid_set, 2).show();
+                Toast.makeText(this, R.string.toast_valid, 2).show();
         } else {
             if (players.size() > 1) {
                 player.lock();
                 if (!tutorial)
-                    Toast.makeText(this, R.string.toast_no_valid_set_locked, 2).show();
+                    Toast.makeText(this, R.string.toast_no_valid_locked, 2).show();
             } else {
                 if (!tutorial)
-                    Toast.makeText(this, R.string.toast_no_valid_set, 2).show();
+                    Toast.makeText(this, R.string.toast_no_valid, 2).show();
             }
         }
         grid.clearSelection();
@@ -193,7 +211,7 @@ public class GameActivity extends Activity
                 }
                 updateUI();
             } else {
-                Toast.makeText(this, R.string.toast_select_your_set, 2).show();
+                Toast.makeText(this, R.string.toast_select, 2).show();
             }
         }
         checkForGameOver();
@@ -208,9 +226,9 @@ public class GameActivity extends Activity
     private void onTutorialConfirmSet(boolean correct) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         if (correct) {
-            builder.setTitle(R.string.tutorial_dialog_title_set_correct);
+            builder.setTitle(R.string.tutorial_dialog_title_correct);
         } else {
-            builder.setTitle(R.string.tutorial_dialog_title_set_wrong);
+            builder.setTitle(R.string.tutorial_dialog_title_wrong);
         }
         LinearLayout vbox = new LinearLayout(this);
         vbox.setPadding(20, 20, 20, 20);
@@ -227,11 +245,11 @@ public class GameActivity extends Activity
         comment.setPadding(20, 20, 20, 20);
         vbox.addView(comment);
         if (correct) {
-            builder.setTitle(R.string.tutorial_dialog_title_set_correct);
-            comment.setText(R.string.tutorial_explanation_set_correct);
+            builder.setTitle(R.string.tutorial_dialog_title_correct);
+            comment.setText(R.string.tutorial_explanation_correct);
         } else {
-            builder.setTitle(R.string.tutorial_dialog_title_set_wrong);
-            comment.setText(R.string.tutorial_explanation_set_wrong);
+            builder.setTitle(R.string.tutorial_dialog_title_wrong);
+            comment.setText(R.string.tutorial_explanation_wrong);
             
             LinearLayout hbox_colors = new LinearLayout(this);
             TextView label_colors = new TextView(this);

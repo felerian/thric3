@@ -348,6 +348,126 @@
        y1="225.21933"
        x2="46.400463"
        y2="18.076468" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761-3"
+       id="linearGradient3832"
+       x1="316.29053"
+       y1="242.25511"
+       x2="85.400833"
+       y2="-23.102177"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient3761-3">
+      <stop
+         style="stop-color:#fde2bb;stop-opacity:1;"
+         offset="0"
+         id="stop3763-0" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop3765-6" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761-3"
+       id="linearGradient4576"
+       x1="316.29053"
+       y1="242.25511"
+       x2="85.400833"
+       y2="-23.102177"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient4578">
+      <stop
+         style="stop-color:#fde2bb;stop-opacity:1;"
+         offset="0"
+         id="stop4580" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop4582" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="translate(-67.245153,-73.100899)"
+       y2="-23.102177"
+       x2="85.400833"
+       y1="242.25511"
+       x1="316.29053"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4586"
+       xlink:href="#linearGradient3761-3"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761-1"
+       id="linearGradient3832-6"
+       x1="316.29053"
+       y1="242.25511"
+       x2="85.400833"
+       y2="-23.102177"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient3761-1">
+      <stop
+         style="stop-color:#fde2bb;stop-opacity:1;"
+         offset="0"
+         id="stop3763-9" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop3765-9" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3761-1"
+       id="linearGradient4576-6"
+       x1="316.29053"
+       y1="242.25511"
+       x2="85.400833"
+       y2="-23.102177"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient4578-7">
+      <stop
+         style="stop-color:#fde2bb;stop-opacity:1;"
+         offset="0"
+         id="stop4580-9" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop4582-5" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="translate(-3.9469735e-6,-3.0943645e-6)"
+       y2="-23.102177"
+       x2="85.400833"
+       y1="242.25511"
+       x1="316.29053"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4586-5"
+       xlink:href="#linearGradient3761-1"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3814"
+       id="linearGradient7048"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(308.04338,-3.0943645e-6)"
+       x1="316.29053"
+       y1="242.25511"
+       x2="85.400833"
+       y2="-23.102177" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3814"
+       id="linearGradient7054"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(616.08677,-3.0943645e-6)"
+       x1="316.29053"
+       y1="242.25511"
+       x2="85.400833"
+       y2="-23.102177" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -357,8 +477,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="282.88833"
-     inkscape:cy="63.583545"
+     inkscape:cx="297.03679"
+     inkscape:cy="91.867816"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -400,20 +520,7 @@
        id="rect3955"
        style="fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3951)"
        transform="matrix(1,0,0,-1,60.49496,306.64788)"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_normal.png"
-       inkscape:export-xdpi="58.868973"
-       inkscape:export-ydpi="58.868973" />
-    <rect
-       transform="matrix(1,0,0,-1,60.49496,306.64788)"
-       style="fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3951)"
-       id="rect3945"
-       width="216.14174"
-       height="333.07086"
-       x="15.005589"
-       y="17.035992"
-       rx="16.73177"
-       ry="16.484459"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_normal.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_normal.png"
        inkscape:export-xdpi="58.868973"
        inkscape:export-ydpi="58.868973" />
     <rect
@@ -425,7 +532,7 @@
        width="207.28346"
        id="rect5388"
        style="fill:url(#linearGradient3162);fill-opacity:1;stroke:#000000;stroke-width:3.54330707;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_normal.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_normal.png"
        inkscape:export-xdpi="58.868973"
        inkscape:export-ydpi="58.868973" />
     <rect
@@ -438,37 +545,9 @@
        rx="8.974968"
        ry="8.974968"
        transform="scale(1,-1)"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_normal.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_normal.png"
        inkscape:export-xdpi="58.868973"
        inkscape:export-ydpi="58.868973" />
-    <path
-       sodipodi:type="arc"
-       style="fill:url(#linearGradient4654);fill-opacity:1;stroke:#c88d00;stroke-width:7.08661413000000007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path3150"
-       sodipodi:cx="191.42857"
-       sodipodi:cy="122.36218"
-       sodipodi:rx="120"
-       sodipodi:ry="67.14286"
-       d="m 311.42857,122.36218 c 0,37.08198 -53.72583,67.14286 -120,67.14286 -66.27417,0 -119.999996,-30.06088 -119.999996,-67.14286 0,-37.081975 53.725826,-67.142858 119.999996,-67.142858 66.27417,0 120,30.060883 120,67.142858 z"
-       transform="matrix(0,1.0868129,1.0806869,0,51.33622,-84.970586)"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_normal.png"
-       inkscape:export-xdpi="58.868973"
-       inkscape:export-ydpi="58.868973" />
-    <text
-       xml:space="preserve"
-       style="font-size:90px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c88d00;fill-opacity:1;stroke:none;font-family:Georgia;-inkscape-font-specification:Sans Bold"
-       x="-216.59209"
-       y="214.75061"
-       id="text3173"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_normal.png"
-       inkscape:export-xdpi="58.868973"
-       inkscape:export-ydpi="58.868973"
-       transform="matrix(0,-1,1,0,0,0)"><tspan
-         sodipodi:role="line"
-         id="tspan3175"
-         x="-216.59209"
-         y="214.75061">SET</tspan></text>
     <rect
        transform="matrix(1,0,0,-1,340.49496,306.64788)"
        style="fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter3951)"
@@ -479,7 +558,7 @@
        y="17.035992"
        rx="16.73177"
        ry="16.484459"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_pressed.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_pressed.png"
        inkscape:export-xdpi="58.743351"
        inkscape:export-ydpi="58.743351" />
     <rect
@@ -492,7 +571,7 @@
        id="rect3008"
        style="fill:#ffff00;fill-opacity:1;stroke:none;filter:url(#filter3951)"
        transform="matrix(1,0,0,-1,340.49496,306.64788)"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_pressed.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_pressed.png"
        inkscape:export-xdpi="58.743351"
        inkscape:export-ydpi="58.743351" />
     <rect
@@ -504,7 +583,7 @@
        y="-39.029846"
        rx="16.046041"
        ry="16.046041"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_pressed.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_pressed.png"
        inkscape:export-xdpi="58.743351"
        inkscape:export-ydpi="58.743351" />
     <rect
@@ -517,7 +596,7 @@
        id="rect3820"
        style="fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter3951)"
        transform="matrix(1,0,0,-1,620.49496,306.64788)"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_checked.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_checked.png"
        inkscape:export-xdpi="58.743351"
        inkscape:export-ydpi="58.743351" />
     <rect
@@ -530,7 +609,7 @@
        y="17.035992"
        rx="16.73177"
        ry="16.484459"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_checked.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_checked.png"
        inkscape:export-xdpi="58.743351"
        inkscape:export-ydpi="58.743351" />
     <rect
@@ -542,7 +621,7 @@
        width="207.28346"
        id="rect3824"
        style="fill:url(#linearGradient3834);fill-opacity:1;stroke:#000000;stroke-width:3.54330707;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_checked.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_checked.png"
        inkscape:export-xdpi="58.743351"
        inkscape:export-ydpi="58.743351" />
     <rect
@@ -596,7 +675,7 @@
     <rect
        inkscape:export-ydpi="58.743351"
        inkscape:export-xdpi="58.743351"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_pressed.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_pressed.png"
        transform="scale(1,-1)"
        ry="8.974968"
        rx="8.974968"
@@ -606,34 +685,6 @@
        width="171.85039"
        id="rect5547"
        style="fill:url(#pattern5556);fill-opacity:1;stroke:#c88d00;stroke-width:7.08661413;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    <path
-       inkscape:export-ydpi="58.743351"
-       inkscape:export-xdpi="58.743351"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_pressed.png"
-       transform="matrix(0,1.0868129,1.0806869,0,331.33622,-84.970586)"
-       d="m 311.42857,122.36218 c 0,37.08198 -53.72583,67.14286 -120,67.14286 -66.27417,0 -119.999996,-30.06088 -119.999996,-67.14286 0,-37.081975 53.725826,-67.142858 119.999996,-67.142858 66.27417,0 120,30.060883 120,67.142858 z"
-       sodipodi:ry="67.14286"
-       sodipodi:rx="120"
-       sodipodi:cy="122.36218"
-       sodipodi:cx="191.42857"
-       id="path5549"
-       style="fill:url(#linearGradient5558);fill-opacity:1.0;stroke:#c88d00;stroke-width:7.08661413000000007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       sodipodi:type="arc" />
-    <text
-       transform="matrix(0,-1,1,0,0,0)"
-       inkscape:export-ydpi="58.743351"
-       inkscape:export-xdpi="58.743351"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_pressed.png"
-       sodipodi:linespacing="125%"
-       id="text5551"
-       y="494.75061"
-       x="-216.59209"
-       style="font-size:90px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c88d00;fill-opacity:1;stroke:none;font-family:Georgia;-inkscape-font-specification:Sans Bold"
-       xml:space="preserve"><tspan
-         y="494.75061"
-         x="-216.59209"
-         id="tspan5553"
-         sodipodi:role="line">SET</tspan></text>
     <rect
        style="fill:url(#pattern5568);fill-opacity:1;stroke:#c88d00;stroke-width:7.08661413;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect5560"
@@ -644,36 +695,56 @@
        rx="8.974968"
        ry="8.974968"
        transform="scale(1,-1)"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_checked.png"
-       inkscape:export-xdpi="58.743351"
-       inkscape:export-ydpi="58.743351" />
-    <path
-       sodipodi:type="arc"
-       style="fill:url(#linearGradient5570);fill-opacity:1.0;stroke:#c88d00;stroke-width:7.08661413000000007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path5562"
-       sodipodi:cx="191.42857"
-       sodipodi:cy="122.36218"
-       sodipodi:rx="120"
-       sodipodi:ry="67.14286"
-       d="m 311.42857,122.36218 c 0,37.08198 -53.72583,67.14286 -120,67.14286 -66.27417,0 -119.999996,-30.06088 -119.999996,-67.14286 0,-37.081975 53.725826,-67.142858 119.999996,-67.142858 66.27417,0 120,30.060883 120,67.142858 z"
-       transform="matrix(0,1.0868129,1.0806869,0,611.33622,-84.970586)"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_checked.png"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_checked.png"
        inkscape:export-xdpi="58.743351"
        inkscape:export-ydpi="58.743351" />
     <text
        xml:space="preserve"
-       style="font-size:90px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c88d00;fill-opacity:1;stroke:none;font-family:Georgia;-inkscape-font-specification:Sans Bold"
-       x="-216.59209"
-       y="774.75061"
-       id="text5564"
+       style="font-size:143.71542357999999240px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient4586-5);fill-opacity:1;stroke:#c88d00;stroke-width:7.08661366000000026;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Georgia;-inkscape-font-specification:Sans Bold"
+       x="112.19333"
+       y="165.96405"
+       id="text3173"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_thric3_4_checked.png"
-       inkscape:export-xdpi="58.743351"
-       inkscape:export-ydpi="58.743351"
-       transform="matrix(0,-1,1,0,0,0)"><tspan
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_normal.png"
+       inkscape:export-xdpi="58.084053"
+       inkscape:export-ydpi="58.084053"
+       transform="scale(0.90896299,1.1001548)"><tspan
          sodipodi:role="line"
-         id="tspan5566"
-         x="-216.59209"
-         y="774.75061">SET</tspan></text>
+         id="tspan3175"
+         x="112.19333"
+         y="165.96405"
+         style="font-size:299.40713500999999042px;fill:url(#linearGradient4586-5);fill-opacity:1;stroke:#c88d00;stroke-width:7.08661366000000026;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">3</tspan></text>
+    <text
+       transform="scale(0.90896299,1.1001548)"
+       inkscape:export-ydpi="58.084053"
+       inkscape:export-xdpi="58.084053"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_pressed.png"
+       sodipodi:linespacing="125%"
+       id="text7044"
+       y="165.96405"
+       x="420.23657"
+       style="font-size:143.71542357999999240px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient7048);fill-opacity:1.0;stroke:#c88d00;stroke-width:7.08661366000000026;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Georgia;-inkscape-font-specification:Sans Bold"
+       xml:space="preserve"><tspan
+         style="font-size:299.40713500999999042px;fill:url(#linearGradient7048);fill-opacity:1.0;stroke:#c88d00;stroke-width:7.08661366000000026;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         y="165.96405"
+         x="420.23657"
+         id="tspan7046"
+         sodipodi:role="line">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:143.71542358px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient7054);fill-opacity:1;stroke:#c88d00;stroke-width:7.08661366;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Georgia;-inkscape-font-specification:Sans Bold"
+       x="728.28003"
+       y="165.96405"
+       id="text7050"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/kai/Dokumente/Projekte/android/Thric3/res/drawable-hdpi/button_player4_checked.png"
+       inkscape:export-xdpi="58.084053"
+       inkscape:export-ydpi="58.084053"
+       transform="scale(0.90896299,1.1001548)"><tspan
+         sodipodi:role="line"
+         id="tspan7052"
+         x="728.28003"
+         y="165.96405"
+         style="font-size:299.40713501px;fill:url(#linearGradient7054);fill-opacity:1;stroke:#c88d00;stroke-width:7.08661366;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">3</tspan></text>
   </g>
 </svg>
