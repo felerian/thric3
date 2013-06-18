@@ -19,12 +19,11 @@
 package de.rebreok.thric3;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.Space;
 
 import java.lang.Math;
 
@@ -55,10 +54,10 @@ public class CardView extends LinearLayout {
         if (card != null) {
             LinearLayout.LayoutParams params;
             ImageView symbol;
-            Space space;
+            View space;
             switch (card.getNumberAsInt()) {
                 case 1:
-                    space = new Space(context);
+                    space = new View(context);
                     params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
                     params.gravity = Gravity.CENTER;
                     space.setLayoutParams(params);
@@ -70,14 +69,14 @@ public class CardView extends LinearLayout {
                     symbol.setLayoutParams(params);
                     symbol.setPadding(5, 5, 5, 5);
                     addView(symbol);
-                    space = new Space(context);
+                    space = new View(context);
                     params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
                     params.gravity = Gravity.CENTER;
                     space.setLayoutParams(params);
                     addView(space);
                     break;
                 case 2:
-                    space = new Space(context);
+                    space = new View(context);
                     params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
                     params.gravity = Gravity.CENTER;
                     space.setLayoutParams(params);
@@ -91,7 +90,7 @@ public class CardView extends LinearLayout {
                         symbol.setPadding(5, 5, 5, 5);
                         addView(symbol);
                     }
-                    space = new Space(context);
+                    space = new View(context);
                     params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
                     params.gravity = Gravity.CENTER;
                     space.setLayoutParams(params);
@@ -109,19 +108,31 @@ public class CardView extends LinearLayout {
                     }
             }
         }
-        updateBackground();
+        setSelection(false);
     }
     
     private void updateBackground() {
-        if (card != null) {
-            if (selected) {
-                setBackground(context.getResources().getDrawable(R.drawable.card_front_selected));
+        //~ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            //~ if (card != null) {
+                //~ if (selected) {
+                    //~ setBackground(context.getResources().getDrawable(R.drawable.card_front_selected));
+                //~ } else {
+                    //~ setBackground(context.getResources().getDrawable(R.drawable.card_front));
+                //~ }
+            //~ } else {
+                //~ setBackground(null);
+            //~ }
+        //~ } else {
+            if (card != null) {
+                if (selected) {
+                    setBackgroundDrawable(context.getResources().getDrawable(R.drawable.card_front_selected));
+                } else {
+                    setBackgroundDrawable(context.getResources().getDrawable(R.drawable.card_front));
+                }
             } else {
-                setBackground(context.getResources().getDrawable(R.drawable.card_front));
+                setBackgroundDrawable(null);
             }
-        } else {
-            setBackground(null);
-        }
+        //~ }
     }
     
     public void setSelection(boolean selected) {

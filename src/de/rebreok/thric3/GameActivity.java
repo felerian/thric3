@@ -26,13 +26,10 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
+import android.view.Window;
 import android.widget.ImageView;
-import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.widget.Space;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -52,6 +49,7 @@ public class GameActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         Resources res = getResources();
         players = new ArrayList<Player>();
         activePlayer = null;
@@ -373,8 +371,8 @@ public class GameActivity extends Activity
             playerName.setTextSize(20);
             hbox.addView(playerName, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0));
             
-            Space space = new Space(this);
-            hbox.addView(space, new LinearLayout.LayoutParams(0, 0, 1));
+            View view = new View(this);
+            hbox.addView(view, new LinearLayout.LayoutParams(0, 0, 1));
             
             TextView playerScore = new TextView(this);
             playerName.setGravity(Gravity.RIGHT);

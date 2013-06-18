@@ -33,7 +33,7 @@
                 android:gravity="center"
                 />
         </LinearLayout>
-        <Space
+        <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -96,7 +96,7 @@
                 android:gravity="center"
                 />
         </LinearLayout>
-        <Space
+        <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -121,7 +121,7 @@
                 android:gravity="center"
                 />
         </LinearLayout>
-        <Space
+        <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"

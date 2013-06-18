@@ -20,19 +20,14 @@ package de.rebreok.thric3;
 
 import android.content.Context;
 import android.view.Gravity;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
-import android.view.LayoutInflater;
 import android.widget.Toast;
 import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
 
-public class CardGrid extends GridLayout {
+public class CardGrid extends LinearLayout {
     
     private Context context;
     private boolean accept_selection;
@@ -43,36 +38,52 @@ public class CardGrid extends GridLayout {
         super(context);
         this.context = context;
         this.accept_selection = false;
-        setOrientation(VERTICAL);
-        setColumnCount(7);
-        setRowCount(3);
-        setUseDefaultMargins(false);
+        this.cardViews = new ArrayList<CardView>();
         
-        //~ setOrientation(HORIZONTAL);
-        //~ for (int col = 0; col < 7; col++) {
-            //~ LinearLayout colLayout = new LinearLayout(context);
-            //~ colLayout.setOrientation(LinearLayout.VERTICAL);
-            //~ addView(colLayout);
-        //~ }
+        setOrientation(HORIZONTAL);
+        for (int col = 0; col < 7; col++) {
+            LinearLayout colLayout = new LinearLayout(context);
+            colLayout.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout.LayoutParams colParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1);
+            addView(colLayout, colParams);
+            for (int row = 0; row < 3; row++) {
+                CardView cardView = new CardView(context, null);
+                cardViews.add(cardView);
+                LinearLayout.LayoutParams rowParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
+                colLayout.addView(cardView, rowParams);
+                cardView.setOnClickListener(new CardView.OnClickListener() {
+                            public void onClick(View v) {
+                                CardView cardView = (CardView) v;
+                                if (cardView.getCard() != null) {
+                                    if (accept_selection) {
+                                        toggleSelection(v);
+                                    } else {
+                                        Toast.makeText(v.getContext(), R.string.toast_call_first, 2).show();
+                                    }
+                                }
+                            }
+                        });
+            }
+        }
     }
     
     public void toggleSelection(View view) {
         CardView cardView = (CardView) view;
-        cardView.setSelection(!cardView.isSelected());
+        if (cardView.getCard() != null) {
+            cardView.setSelection(!cardView.isSelected());
+        }
     }
     
     public void clearSelection() {
-        for (int i=0; i<getChildCount(); i++) {
-            CardView cardView = (CardView) getChildAt(i);
+        for (CardView cardView: cardViews) {
             cardView.setSelection(false);
         }
     }
     
     public Pile getSelectedCards() {
         Pile result = new Pile();
-        for (int i=0; i<getChildCount(); i++) {
-            CardView cardView = (CardView) getChildAt(i);
-            if (cardView.isSelected()) {
+        for (CardView cardView: cardViews) {
+            if (cardView.isSelected() && cardView.getCard() != null) {
                 result.add(cardView.getCard());
             }
         }
@@ -81,9 +92,10 @@ public class CardGrid extends GridLayout {
     
     public Pile getAllCards() {
         Pile result = new Pile();
-        for (int i=0; i<getChildCount(); i++) {
-            CardView cardView = (CardView) getChildAt(i);
-            result.add(cardView.getCard());
+        for (CardView cardView: cardViews) {
+            if (cardView.getCard() != null) {
+                result.add(cardView.getCard());
+            }
         }
         return result;
     }
@@ -96,30 +108,22 @@ public class CardGrid extends GridLayout {
      * Add a card to the table
      */
     public void add(Card card) {
-        CardView cardView = new CardView(context, card);
-        cardView.setOnClickListener(new CardView.OnClickListener() {
-                public void onClick(View v) {
-                    if (accept_selection) {
-                        toggleSelection(v);
-                    } else {
-                        Toast.makeText(v.getContext(), R.string.toast_call_first, 2).show();
-                    }
-                }
-            });
-        GridLayout.LayoutParams params = new GridLayout.LayoutParams();
-        params.width = getWidth() / 7;
-        params.height = getHeight() / 3;
-        addView(cardView, params);
+        for (CardView cardView: cardViews) {
+            if (cardView.getCard() == null) {
+                cardView.setCard(card);
+                break;
+            }
+        }
     }
     
     /**
      * Remove a card from the table
      */
     public void remove(Card card) {
-        for (int i=0; i<getChildCount(); i++) {
-            CardView cardView = (CardView) getChildAt(i);
+        for (CardView cardView: cardViews) {
             if (cardView.getCard() == card) {
-                removeView(cardView);
+                cardView.setCard(null);
+                break;
             }
         }
     }
@@ -128,6 +132,12 @@ public class CardGrid extends GridLayout {
      * Return the number of cards on the table
      */
     public int getCount() {
-        return getChildCount();
+        int count = 0;
+        for (CardView cardView: cardViews) {
+            if (cardView.getCard() != null) {
+                count++;
+            }
+        }
+        return count;
     }
 }
