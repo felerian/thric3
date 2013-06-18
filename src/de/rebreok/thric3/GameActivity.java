@@ -238,7 +238,7 @@ public class GameActivity extends Activity
         hbox.setOrientation(LinearLayout.HORIZONTAL);
         hbox.setGravity(Gravity.CENTER);
         for (Card card: grid.getSelectedCards()) {
-            hbox.addView(new CardView(this, card, false), new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 200, 0));
+            hbox.addView(new CardView(this, card), new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 200, 0));
         }
         vbox.addView(hbox, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
         TextView comment = new TextView(this);

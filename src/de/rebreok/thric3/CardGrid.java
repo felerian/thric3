@@ -37,6 +37,8 @@ public class CardGrid extends GridLayout {
     private Context context;
     private boolean accept_selection;
     
+    private ArrayList<CardView> cardViews;
+    
     public CardGrid(Context context) {
         super(context);
         this.context = context;
@@ -45,6 +47,13 @@ public class CardGrid extends GridLayout {
         setColumnCount(7);
         setRowCount(3);
         setUseDefaultMargins(false);
+        
+        //~ setOrientation(HORIZONTAL);
+        //~ for (int col = 0; col < 7; col++) {
+            //~ LinearLayout colLayout = new LinearLayout(context);
+            //~ colLayout.setOrientation(LinearLayout.VERTICAL);
+            //~ addView(colLayout);
+        //~ }
     }
     
     public void toggleSelection(View view) {
@@ -83,8 +92,11 @@ public class CardGrid extends GridLayout {
         accept_selection = accept;
     }
     
+    /**
+     * Add a card to the table
+     */
     public void add(Card card) {
-        CardView cardView = new CardView(context, card, false);
+        CardView cardView = new CardView(context, card);
         cardView.setOnClickListener(new CardView.OnClickListener() {
                 public void onClick(View v) {
                     if (accept_selection) {
@@ -100,6 +112,9 @@ public class CardGrid extends GridLayout {
         addView(cardView, params);
     }
     
+    /**
+     * Remove a card from the table
+     */
     public void remove(Card card) {
         for (int i=0; i<getChildCount(); i++) {
             CardView cardView = (CardView) getChildAt(i);
@@ -109,6 +124,9 @@ public class CardGrid extends GridLayout {
         }
     }
     
+    /**
+     * Return the number of cards on the table
+     */
     public int getCount() {
         return getChildCount();
     }
