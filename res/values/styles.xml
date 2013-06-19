@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="textLightSmall" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#CCCCCC</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="textLightLarge" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">#CCCCCC</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="textDarkSmall" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#000000</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="textDarkLarge" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">#000000</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="embossed">
+        <item name="android:background">@drawable/embossed</item>
+    </style>
+</resources>

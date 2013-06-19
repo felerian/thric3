@@ -16,31 +16,36 @@
             android:id="@+id/button_player2"
             android:onClick="onPlayerButton"
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:textOn=""
             android:textOff=""
             android:background="@drawable/button_player2"
-            android:layout_margin="0dp"
+            android:layout_margin="5dp"
             android:layout_gravity="center"
             />
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:layout_gravity="center"
             >
             <LinearLayout
                 style="@style/embossed"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="vertical"
                 >
                 <TextView
                     style="@style/textLightSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_score"
+                    />
+                <TextView
+                    style="@style/textLightLarge"
                     android:id="@+id/text_score_player2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -55,7 +60,7 @@
         </LinearLayout>
     </LinearLayout>
     <View
-        android:layout_width="5dp"
+        android:layout_width="10dp"
         android:layout_height="fill_parent"
         android:background="@drawable/shadow_left"
         />
@@ -67,7 +72,7 @@
         android:layout_weight="7"
         />
     <View
-        android:layout_width="5dp"
+        android:layout_width="10dp"
         android:layout_height="fill_parent"
         android:background="@drawable/shadow_right"
         />
@@ -81,10 +86,9 @@
         <ImageView
             android:onClick="onButtonDealCards"
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:src="@drawable/button_deal_cards"
-            android:layout_margin="0dp"
+            android:layout_margin="5dp"
             />
         <LinearLayout
             android:orientation="vertical"
@@ -97,12 +101,18 @@
                 style="@style/embossed"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="vertical"
                 >
                 <TextView
                     style="@style/textLightSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_cards_left"
+                    />
+                <TextView
+                    style="@style/textLightLarge"
                     android:id="@+id/text_cards_left"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -118,12 +128,18 @@
                 style="@style/embossed"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="vertical"
                 >
                 <TextView
                     style="@style/textLightSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_score"
+                    />
+                <TextView
+                    style="@style/textLightLarge"
                     android:id="@+id/text_score_player1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -135,12 +151,11 @@
             android:id="@+id/button_player1"
             android:onClick="onPlayerButton"
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:textOn=""
             android:textOff=""
             android:background="@drawable/button_player1"
-            android:layout_margin="0dp"
+            android:layout_margin="5dp"
             android:layout_gravity="center"
             />
     </LinearLayout>

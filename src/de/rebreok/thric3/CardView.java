@@ -20,7 +20,9 @@ package de.rebreok.thric3;
 
 import android.content.Context;
 import android.os.Build;
+import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -39,6 +41,15 @@ public class CardView extends LinearLayout {
         return card;
     }
     
+    public CardView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        this.context = context;
+        this.selected = false;
+        setOrientation(VERTICAL);
+        setGravity(Gravity.CENTER);
+        setCard(null);
+    }
+    
     public CardView(Context context, Card card) {
         super(context);
         this.context = context;
@@ -51,59 +62,36 @@ public class CardView extends LinearLayout {
     public void setCard(Card card) {
         this.card = card;
         removeAllViews();
+        LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (card != null) {
             LinearLayout.LayoutParams params;
             ImageView symbol;
             View space;
             switch (card.getNumberAsInt()) {
                 case 1:
-                    space = new View(context);
-                    params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
-                    params.gravity = Gravity.CENTER;
-                    space.setLayoutParams(params);
+                    space = (View) inflater.inflate(R.layout.space_symbol, this, false);
                     addView(space);
-                    symbol = new ImageView(context);
+                    symbol = (ImageView) inflater.inflate(R.layout.symbol, this, false);
                     symbol.setImageResource(card.getImageId());
-                    params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
-                    params.gravity = Gravity.CENTER;
-                    symbol.setLayoutParams(params);
-                    symbol.setPadding(5, 5, 5, 5);
                     addView(symbol);
-                    space = new View(context);
-                    params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
-                    params.gravity = Gravity.CENTER;
-                    space.setLayoutParams(params);
+                    space = (View) inflater.inflate(R.layout.space_symbol, this, false);
                     addView(space);
                     break;
                 case 2:
-                    space = new View(context);
-                    params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
-                    params.gravity = Gravity.CENTER;
-                    space.setLayoutParams(params);
+                    space = (View) inflater.inflate(R.layout.space_half_symbol, this, false);
                     addView(space);
                     for (int i = 0; i < 2; i++) {
-                        symbol = new ImageView(context);
+                        symbol = (ImageView) inflater.inflate(R.layout.symbol, this, false);
                         symbol.setImageResource(card.getImageId());
-                        params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 2f);
-                        params.gravity = Gravity.CENTER;
-                        symbol.setLayoutParams(params);
-                        symbol.setPadding(5, 5, 5, 5);
                         addView(symbol);
                     }
-                    space = new View(context);
-                    params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
-                    params.gravity = Gravity.CENTER;
-                    space.setLayoutParams(params);
+                    space = (View) inflater.inflate(R.layout.space_half_symbol, this, false);
                     addView(space);
                     break;
                 case 3:
                     for (int i = 0; i < 3; i++) {
-                        symbol = new ImageView(context);
+                        symbol = (ImageView) inflater.inflate(R.layout.symbol, this, false);
                         symbol.setImageResource(card.getImageId());
-                        params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 0, 1f);
-                        params.gravity = Gravity.CENTER;
-                        symbol.setLayoutParams(params);
-                        symbol.setPadding(5, 5, 5, 5);
                         addView(symbol);
                     }
             }

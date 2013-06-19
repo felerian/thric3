@@ -10,7 +10,7 @@
         android:layout_height="0dp"
         android:src="@drawable/logo"
         android:layout_weight="1"
-        android:layout_margin="5dp"
+        android:layout_margin="50dp"
         />
     <LinearLayout
         android:orientation="vertical"
@@ -21,33 +21,33 @@
         android:gravity="center"
         >
         <Button
-            style="@style/textDarkSmall"
+            style="@style/textDarkLarge"
             android:onClick="onButtonTutorial"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_tutorial"
-            android:layout_margin="5dp"
-            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:padding="20dp"
             android:background="@drawable/card_front"
             />
         <Button
-            style="@style/textDarkSmall"
+            style="@style/textDarkLarge"
             android:onClick="onButtonSolitaire"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_solitaire"
-            android:layout_margin="5dp"
-            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:padding="20dp"
             android:background="@drawable/card_front"
             />
         <Button
-            style="@style/textDarkSmall"
+            style="@style/textDarkLarge"
             android:onClick="onButtonMultiplayer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_multiplayer"
-            android:layout_margin="5dp"
-            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:padding="20dp"
             android:background="@drawable/card_front"
             />
 <!--
@@ -58,8 +58,8 @@
             android:text="@string/button_vs_ai"
             android:textColor="#ff000000"
             android:fontFamily="serif"
-            android:layout_margin="5dp"
-            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:padding="20dp"
             android:background="@drawable/card_front"
             />
 -->

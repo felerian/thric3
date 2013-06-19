@@ -22,6 +22,7 @@ import android.content.Context;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -40,6 +41,8 @@ public class CardGrid extends LinearLayout {
         this.accept_selection = false;
         this.cardViews = new ArrayList<CardView>();
         
+        LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        
         setOrientation(HORIZONTAL);
         for (int col = 0; col < 7; col++) {
             LinearLayout colLayout = new LinearLayout(context);
@@ -47,10 +50,9 @@ public class CardGrid extends LinearLayout {
             LinearLayout.LayoutParams colParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1);
             addView(colLayout, colParams);
             for (int row = 0; row < 3; row++) {
-                CardView cardView = new CardView(context, null);
+                CardView cardView = (CardView) inflater.inflate(R.layout.cardview, colLayout, false);
                 cardViews.add(cardView);
-                LinearLayout.LayoutParams rowParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1);
-                colLayout.addView(cardView, rowParams);
+                colLayout.addView(cardView);
                 cardView.setOnClickListener(new CardView.OnClickListener() {
                             public void onClick(View v) {
                                 CardView cardView = (CardView) v;
