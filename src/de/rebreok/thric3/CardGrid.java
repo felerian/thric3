@@ -48,7 +48,11 @@ public class CardGrid extends LinearLayout {
             LinearLayout colLayout = new LinearLayout(context);
             colLayout.setOrientation(LinearLayout.VERTICAL);
             LinearLayout.LayoutParams colParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1);
-            addView(colLayout, colParams);
+            if (col == 5) {
+                addView(colLayout, 0, colParams);
+            } else {
+                addView(colLayout, colParams);
+            }
             for (int row = 0; row < 3; row++) {
                 CardView cardView = (CardView) inflater.inflate(R.layout.cardview, colLayout, false);
                 cardViews.add(cardView);
