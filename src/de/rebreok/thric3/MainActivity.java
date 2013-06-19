@@ -48,7 +48,8 @@ public class MainActivity extends Activity
     }
     
     public void onButtonTutorial(View view) {
-        Intent intent = new Intent(this, TutorialActivity.class);
+        Intent intent = new Intent(this, GameActivity.class);
+        intent.putExtra(MainActivity.GAME_MODE, MainActivity.MODE_TUTORIAL);
         startActivity(intent);
     }
     
@@ -68,6 +69,11 @@ public class MainActivity extends Activity
                     }
                 });
         builder.create().show();
+    }
+    
+    public void onButtonHelp(View view) {
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
     }
     
     public void startMultiplayer(int nr_of_players) {

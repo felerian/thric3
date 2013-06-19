@@ -19,13 +19,11 @@
 package de.rebreok.thric3;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 
 
-public class TutorialActivity extends Activity
+public class HelpActivity extends Activity
 {
     /** Called when the activity is first created. */
     @Override
@@ -33,12 +31,6 @@ public class TutorialActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.tutorial);
-    }
-    
-    public void onButtonStartGame(View view) {
-        Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra(MainActivity.GAME_MODE, MainActivity.MODE_TUTORIAL);
-        startActivity(intent);
+        setContentView(R.layout.help);
     }
 }

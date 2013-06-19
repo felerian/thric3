@@ -2,8 +2,7 @@
 <resources>
     <string name="app_name">Thric3</string>
     <string name="button_tutorial">Tutorial</string>
-    <string name="button_tutorial_start">Spiel Starten</string>
-    <string name="button_solitaire">Solitair</string>
+    <string name="button_solitaire">Solitär</string>
     <string name="button_multiplayer">Mehrspielermodus</string>
     <string name="button_vs_ai">gegen KI</string>
     <string name="button_help">Hilfe</string>

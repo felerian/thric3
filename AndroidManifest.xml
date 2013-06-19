@@ -13,7 +13,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="TutorialActivity"
+        <activity android:name="HelpActivity"
                   android:icon="@drawable/logo"
                   android:label="@string/manual_title">
         </activity>
