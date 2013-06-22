@@ -27,13 +27,11 @@
             android:layout_gravity="center"
             android:gravity="center"
             >
-<!--
         <Button
             style="@style/menu_button"
             android:onClick="onButtonTutorial"
             android:text="@string/button_tutorial"
             />
--->
         <Button
             style="@style/menu_button"
             android:onClick="onButtonStartGame"
