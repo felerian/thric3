@@ -75,16 +75,9 @@ public class GameActivity extends Activity
                 players.add(new Player(res.getString(R.string.name_player2)));
                 players.add(new Player(res.getString(R.string.name_player3)));
                 break;
-            case MainActivity.MODE_4P:
-                setContentView(R.layout.game4);
-                players.add(new Player(res.getString(R.string.name_player1)));
-                players.add(new Player(res.getString(R.string.name_player2)));
-                players.add(new Player(res.getString(R.string.name_player3)));
-                players.add(new Player(res.getString(R.string.name_player4)));
-                break;
         }
         
-        deck = new Deck();
+        deck = new Deck(true);
         grid = new CardGrid(this);
         LinearLayout gridContainer = (LinearLayout) findViewById(R.id.grid_container);
         gridContainer.addView(grid, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT, 0));

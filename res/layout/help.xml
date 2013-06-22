@@ -10,84 +10,35 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         >
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            >
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                style="@style/manual_paragraph"
+                android:layout_width="fill_parent"
                 android:text="@string/manual_introduction"
-                android:layout_margin="5dp"
                 />
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/clubs_green_half"
-                android:layout_margin="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            >
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                style="@style/manual_paragraph"
+                android:layout_width="fill_parent"
                 android:text="@string/manual_card"
-                android:layout_margin="5dp"
                 />
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/hearts_red_empty"
-                android:layout_margin="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            >
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                style="@style/manual_paragraph"
+                android:layout_width="fill_parent"
                 android:text="@string/manual_properties"
-                android:layout_margin="5dp"
                 />
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/diamonds_blue_full"
-                android:layout_margin="5dp"
-                />
-        </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             >
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/manual_paragraph"
                 android:layout_weight="1"
                 android:text="@string/manual_valid"
-                android:layout_margin="5dp"
                 />
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/manual_image"
                 android:layout_weight="1"
                 android:src="@drawable/manual_valid"
-                android:layout_margin="5dp"
                 />
         </LinearLayout>
         <LinearLayout
@@ -96,18 +47,14 @@
             android:layout_height="wrap_content"
             >
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/manual_paragraph"
                 android:layout_weight="1"
                 android:text="@string/manual_invalid"
-                android:layout_margin="5dp"
                 />
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/manual_image"
                 android:layout_weight="1"
                 android:src="@drawable/manual_invalid"
-                android:layout_margin="5dp"
                 />
         </LinearLayout>
         <LinearLayout
@@ -116,18 +63,14 @@
             android:layout_height="wrap_content"
             >
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                style="@style/manual_paragraph"
+                android:layout_weight="4"
                 android:text="@string/manual_call"
-                android:layout_margin="5dp"
                 />
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/manual_image"
                 android:layout_weight="1"
-                android:src="@drawable/manual_button"
-                android:layout_margin="5dp"
+                android:src="@drawable/button_player1_normal"
                 />
         </LinearLayout>
         <LinearLayout
@@ -136,18 +79,14 @@
             android:layout_height="wrap_content"
             >
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                style="@style/manual_paragraph"
+                android:layout_weight="4"
                 android:text="@string/manual_deal"
-                android:layout_margin="5dp"
                 />
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/manual_image"
                 android:layout_weight="1"
                 android:src="@drawable/button_deal_cards_normal"
-                android:layout_margin="5dp"
                 />
         </LinearLayout>
     </LinearLayout>

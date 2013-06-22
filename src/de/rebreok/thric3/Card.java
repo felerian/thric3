@@ -51,7 +51,7 @@ class Card {
 	}
     
     /**
-	 * Creates a dummy card.
+	 * Creates a dummy card for debugging purposes.
 	 */
 	public Card() {
 		this.color = Color.GREEN;

@@ -43,6 +43,9 @@ class Pile extends HashSet<Card>{
 		return true;
 	}
     
+    /**
+     * Return the number of different colors in this pile
+     */
     public int getColorCount() {
         HashSet<Card.Color> colors = new HashSet<Card.Color>();
 		for (Card card : this)
@@ -50,6 +53,9 @@ class Pile extends HashSet<Card>{
 		return colors.size();
     }
     
+    /**
+     * Return the number of different shapes in this pile
+     */
     public int getShapeCount() {
         HashSet<Card.Shape> shapes = new HashSet<Card.Shape>();
 		for (Card card : this)
@@ -57,6 +63,9 @@ class Pile extends HashSet<Card>{
 		return shapes.size();
     }
     
+    /**
+     * Return the number of different numbers in this pile
+     */
     public int getNumberCount() {
         HashSet<Card.Number> numbers = new HashSet<Card.Number>();
 		for (Card card : this)
@@ -64,6 +73,9 @@ class Pile extends HashSet<Card>{
 		return numbers.size();
     }
     
+    /**
+     * Return the number of different fillings in this pile
+     */
     public int getFillingCount() {
         HashSet<Card.Filling> fillings = new HashSet<Card.Filling>();
 		for (Card card : this)
@@ -72,7 +84,7 @@ class Pile extends HashSet<Card>{
     }
     
     /**
-	 * Check if this pile contains any valid Set, according to the rules
+	 * Check if this pile contains any valid Thric3, according to the rules
 	 */
     public boolean containsValidSet() {
         for (Card card1: this) {

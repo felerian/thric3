@@ -28,7 +28,7 @@ import java.util.Collections;
 class Deck extends Stack<Card> {
     
 	/** 
-     * Create a new shuffled deck of 81 cards
+     * Create a new shuffled deck of 81 cards.
      */
 	public Deck() {
 		super();
@@ -41,11 +41,18 @@ class Deck extends Stack<Card> {
 				}
 			}
 		}
-		//~ for (Card.Color c : Card.Color.values()) {
-			//~ for (Card.Shape s : Card.Shape.values()) {
-						//~ add(new Card(c, s, Card.Number.TWO, Card.Filling.HALF));
-			//~ }
-		//~ }
 		Collections.shuffle(this);
+	}
+    
+	/** 
+     * Create a smaller, unshuffled deck for debugging purposes.
+     */
+	public Deck(boolean debug) {
+		super();
+		for (Card.Color c : Card.Color.values()) {
+			for (Card.Shape s : Card.Shape.values()) {
+						add(new Card(c, s, Card.Number.TWO, Card.Filling.HALF));
+			}
+		}
 	}
 }

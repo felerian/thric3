@@ -10,7 +10,7 @@
         android:layout_height="fill_parent"
         android:src="@drawable/logo"
         android:layout_weight="1"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         />
     <LinearLayout
         android:orientation="vertical"
@@ -28,60 +28,22 @@
             android:gravity="center"
             >
 <!--
-            <Button
-                style="@style/textDarkSmall"
-                android:onClick="onButtonTutorial"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_tutorial"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/card_front"
-                />
+        <Button
+            style="@style/menu_button"
+            android:onClick="onButtonTutorial"
+            android:text="@string/button_tutorial"
+            />
 -->
-            <Button
-                style="@style/textDarkSmall"
-                android:onClick="onButtonSolitaire"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_solitaire"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/card_front"
-                />
-            <Button
-                style="@style/textDarkSmall"
-                android:onClick="onButtonMultiplayer"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_multiplayer"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/card_front"
-                />
-            <Button
-                style="@style/textDarkSmall"
-                android:onClick="onButtonHelp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_help"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/card_front"
-                />
-<!--
-            <Button
-                android:onClick="onButtonVsAi"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_vs_ai"
-                android:textColor="#ff000000"
-                android:fontFamily="serif"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/card_front"
-                />
--->
+        <Button
+            style="@style/menu_button"
+            android:onClick="onButtonStartGame"
+            android:text="@string/button_start_game"
+            />
+        <Button
+            style="@style/menu_button"
+            android:onClick="onButtonHelp"
+            android:text="@string/button_help"
+            />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
