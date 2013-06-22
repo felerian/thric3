@@ -13,10 +13,10 @@
     <string name="item_2_players">2 Spieler</string>
     <string name="item_3_players">3 Spieler</string>
     <string name="item_4_players">4 Spieler</string>
-    <string name="name_player1">Spieler A</string>
-    <string name="name_player2">Spieler B</string>
-    <string name="name_player3">Spieler C</string>
-    <string name="name_player4">Spieler D</string>
+    <string name="name_player1">Spieler 1</string>
+    <string name="name_player2">Spieler 2</string>
+    <string name="name_player3">Spieler 3</string>
+    <string name="name_player4">Spieler 4</string>
     <string name="toast_select">Wähle dein Thric3</string>
     <string name="toast_no_cards_left">Keine Karten mehr im Deck</string>
     <string name="toast_not_your_turn">Du bist nicht am Zug!</string>

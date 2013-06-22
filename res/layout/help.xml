@@ -89,10 +89,5 @@
                 android:src="@drawable/button_deal_cards_normal"
                 />
         </LinearLayout>
-        <Button
-            style="@style/menu_button"
-            android:onClick="onFinish"
-            android:text="@string/button_back_to_menu"
-            />
     </LinearLayout>
 </ScrollView>

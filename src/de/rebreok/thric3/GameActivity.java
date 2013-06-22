@@ -330,6 +330,7 @@ public class GameActivity extends Activity
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.dialog_game_over_title);
         builder.setCancelable(false);
+        
         ListView listView = new ListView(this);
         List<HashMap<String, String> > listData = new ArrayList<HashMap<String, String> >();
         ArrayList<Player> sortedPlayers = new ArrayList<Player>(players);
@@ -356,6 +357,7 @@ public class GameActivity extends Activity
         SimpleAdapter adapter = new SimpleAdapter(this, listData, R.layout.final_score_entry, new String[] {PLAYER_NAME, PLAYER_SCORE, PLAYER_ICON}, new int[] {R.id.player_name, R.id.player_score, R.id.player_icon});
         listView.setAdapter(adapter);
         builder.setView(listView);
+        
         //~ builder.setPositiveButton(R.string.button_replay, new DialogInterface.OnClickListener() {
                    //~ public void onClick(DialogInterface dialog, int id) {
                        //~ finish();

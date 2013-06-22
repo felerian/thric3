@@ -46,4 +46,59 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">5dp</item>
     </style>
+    <style name="sidebar">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/background_sidebar</item>
+    </style>
+    <style name="vspace">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="score_frame">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:background">@drawable/embossed</item>
+    </style>
+    <style name="deal_button">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:onClick">onButtonDealCards</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="player_button">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:onClick">onPlayerButton</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+    <style name="card_view">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">1dp</item>
+    </style>
+    <style name="symbol">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+    <style name="half_symbol">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
 </resources>

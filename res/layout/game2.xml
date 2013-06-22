@@ -5,24 +5,11 @@
     android:layout_height="fill_parent"
     android:background="@drawable/background_table"
     >
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:background="@drawable/background_sidebar"
-        >
+    <LinearLayout style="@style/sidebar" >
         <ToggleButton
+            style="@style/player_button"
             android:id="@+id/button_player2"
-            android:onClick="onPlayerButton"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textOn=""
-            android:textOff=""
             android:background="@drawable/button_player2"
-            android:layout_margin="0dp"
-            android:layout_gravity="center"
             />
         <LinearLayout
             android:orientation="vertical"
@@ -31,14 +18,7 @@
             android:layout_weight="2"
             android:layout_gravity="center"
             >
-            <LinearLayout
-                style="@style/embossed"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:orientation="vertical"
-                >
+            <LinearLayout style="@style/score_frame" >
                 <TextView
                     style="@style/textLightSmall"
                     android:id="@+id/text_score_player2"
@@ -47,11 +27,7 @@
                     android:text="-"
                     />
             </LinearLayout>
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
+            <View style="@style/vspace" />
         </LinearLayout>
     </LinearLayout>
     <View
@@ -71,20 +47,10 @@
         android:layout_height="fill_parent"
         android:background="@drawable/shadow_right"
         />
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:background="@drawable/background_sidebar"
-        >
+    <LinearLayout style="@style/sidebar" >
         <ImageView
-            android:onClick="onButtonDealCards"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/deal_button"
             android:src="@drawable/button_deal_cards"
-            android:layout_margin="0dp"
             />
         <LinearLayout
             android:orientation="vertical"
@@ -93,14 +59,7 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             >
-            <LinearLayout
-                style="@style/embossed"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:orientation="vertical"
-                >
+            <LinearLayout style="@style/score_frame" >
                 <TextView
                     style="@style/textLightSmall"
                     android:id="@+id/text_cards_left"
@@ -109,19 +68,8 @@
                     android:text="-"
                     />
             </LinearLayout>
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-            <LinearLayout
-                style="@style/embossed"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:orientation="vertical"
-                >
+            <View style="@style/vspace" />
+            <LinearLayout style="@style/score_frame" >
                 <TextView
                     style="@style/textLightSmall"
                     android:id="@+id/text_score_player1"
@@ -132,16 +80,9 @@
             </LinearLayout>
         </LinearLayout>
         <ToggleButton
+            style="@style/player_button"
             android:id="@+id/button_player1"
-            android:onClick="onPlayerButton"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textOn=""
-            android:textOff=""
             android:background="@drawable/button_player1"
-            android:layout_margin="0dp"
-            android:layout_gravity="center"
             />
     </LinearLayout>
 </LinearLayout>
