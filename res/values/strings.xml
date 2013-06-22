@@ -8,7 +8,7 @@
     <string name="button_help">Help</string>
     <string name="button_about">About</string>
     <string name="label_score">Score</string>
-    <string name="label_cards_left">Cards left</string>
+    <string name="label_cards_left">Deck</string>
     <string name="item_1_player">1 Player</string>
     <string name="item_2_players">2 Players</string>
     <string name="item_3_players">3 Players</string>
@@ -46,7 +46,7 @@
     <string name="manual_call">If you have found a Thric3, press this button and select the cards of the Thric3 you found. Then press the button again to confirm.</string>
     <string name="manual_deal">If you cannot find any Thric3, press this button to deal three additional cards. Up to 21 cards can be in the game at the same time. 21 cards always contain at least one Thric3.</string>
     <string name="manual_title">Manual</string>
-    <string name="dialog_game_over_title">Game Over</string>
+    <string name="dialog_game_over_title">Final Score</string>
     <string name="dialog_game_over_text">There are no valid Thric3s left in the game. Final Score:</string>
     <string name="button_back_to_menu">Back to Menu</string>
     <string name="button_replay">Play Again</string>

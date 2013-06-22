@@ -26,18 +26,29 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
 
 public class GameActivity extends Activity
 {
+    private final static String PLAYER_NAME = "player_name";
+    private final static String PLAYER_SCORE = "player_score";
+    private final static String PLAYER_ICON = "player_icon";
+    
     private Deck deck;
     private CardGrid grid;
     private ArrayList<Player> players;
@@ -86,7 +97,7 @@ public class GameActivity extends Activity
     
     public void onCardClick(CardView cardView) {
         if (activePlayer == null) {
-            Toast.makeText(this, R.string.toast_call_first, 2).show();
+            Toast.makeText(this, R.string.toast_call_first, 1).show();
         } else {
             grid.toggleSelection(cardView);
         }
@@ -125,16 +136,16 @@ public class GameActivity extends Activity
         }
         if (player.isLocked()) { // Locked player tries to call SET:
             button.setChecked(false);
-            Toast.makeText(this, R.string.toast_locked, 2).show();
+            Toast.makeText(this, R.string.toast_locked, 1).show();
         } else if (grid.getCount() == 0) { // Player tries to call SET with no cards on the table:
             button.setChecked(false);
         } else if (activePlayer == null) { // Player calls SET:
             callSet(player);
         } else if (activePlayer != player) { // Wrong player tries to confirm SET:
-            Toast.makeText(this, R.string.toast_not_your_turn, 2).show();
+            Toast.makeText(this, R.string.toast_not_your_turn, 1).show();
             button.setChecked(false);
         } else if (grid.getSelectedCards().size() != 3) { // Player tries to confirm SET with wrong number of cards:
-            Toast.makeText(this, R.string.toast_consists_of_three_cards, 2).show();
+            Toast.makeText(this, R.string.toast_consists_of_three_cards, 1).show();
             button.setChecked(true);
         } else { // Player confirms SET:
             confirmSet(player);
@@ -145,7 +156,7 @@ public class GameActivity extends Activity
         activePlayer = player;
         grid.setAcceptSelection(true);
         if (tutorial)
-            Toast.makeText(this, R.string.toast_select, 2).show();
+            Toast.makeText(this, R.string.toast_select, 1).show();
     }
     
     private void confirmSet(Player player) {
@@ -160,15 +171,15 @@ public class GameActivity extends Activity
                 player.addCard(card);
             }
             if (!tutorial)
-                Toast.makeText(this, R.string.toast_valid, 2).show();
+                Toast.makeText(this, R.string.toast_valid, 1).show();
         } else {
             if (players.size() > 1) {
                 player.lock();
                 if (!tutorial)
-                    Toast.makeText(this, R.string.toast_no_valid_locked, 2).show();
+                    Toast.makeText(this, R.string.toast_no_valid_locked, 1).show();
             } else {
                 if (!tutorial)
-                    Toast.makeText(this, R.string.toast_no_valid, 2).show();
+                    Toast.makeText(this, R.string.toast_no_valid, 1).show();
             }
         }
         grid.clearSelection();
@@ -192,8 +203,8 @@ public class GameActivity extends Activity
                 } else if (cards_in_game < 21) {
                     nr_of_cards_to_deal = 3;
                 }
-                if (deck.size() == 0) {
-                    Toast.makeText(this, R.string.toast_no_cards_left, 2).show();
+                if (deck.size() == 0 && force) {
+                    Toast.makeText(this, R.string.toast_no_cards_left, 1).show();
                 }
                 for (int i=0; i < nr_of_cards_to_deal; i++) {
                     if (deck.size() > 0) {
@@ -202,7 +213,7 @@ public class GameActivity extends Activity
                 }
                 updateUI();
             } else {
-                Toast.makeText(this, R.string.toast_select, 2).show();
+                Toast.makeText(this, R.string.toast_select, 1).show();
             }
         }
         checkForGameOver();
@@ -319,64 +330,37 @@ public class GameActivity extends Activity
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.dialog_game_over_title);
         builder.setCancelable(false);
-        
-        LinearLayout vbox = new LinearLayout(this);
-        vbox.setPadding(20, 20, 20, 20);
-        vbox.setOrientation(LinearLayout.VERTICAL);
-        builder.setView(vbox);
-        
-        TextView message = new TextView(this);
-        message.setPadding(20, 20, 20, 20);
-        message.setText(R.string.dialog_game_over_text);
-        vbox.addView(message);
-        
-        for (Player player: players) {
-            LinearLayout hbox = new LinearLayout(this);
-            hbox.setOrientation(LinearLayout.HORIZONTAL);
-            hbox.setGravity(Gravity.CENTER_VERTICAL);
-            vbox.addView(hbox, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT, 0));
-            
-            ImageView icon_left = new ImageView(this);
-            ImageView icon_right = new ImageView(this);
+        ListView listView = new ListView(this);
+        List<HashMap<String, String> > listData = new ArrayList<HashMap<String, String> >();
+        ArrayList<Player> sortedPlayers = new ArrayList<Player>(players);
+        Collections.sort(sortedPlayers);
+        Collections.reverse(sortedPlayers);
+        for (Player player: sortedPlayers)
+        {
+            HashMap<String, String> map = new HashMap<String, String>();
+            map.put(PLAYER_NAME, player.getName());
+            map.put(PLAYER_SCORE, String.valueOf(player.getScore()));
             switch (players.indexOf(player)) {
                 case 0:
-                    icon_left.setImageResource(R.drawable.button_player1_normal);
-                    icon_right.setImageResource(R.drawable.button_player1_normal);
+                    map.put(PLAYER_ICON, String.valueOf(R.drawable.button_player1_normal));
                     break;
                 case 1:
-                    icon_left.setImageResource(R.drawable.button_player2_normal);
-                    icon_right.setImageResource(R.drawable.button_player2_normal);
+                    map.put(PLAYER_ICON, String.valueOf(R.drawable.button_player2_normal));
                     break;
                 case 2:
-                    icon_left.setImageResource(R.drawable.button_player3_normal);
-                    icon_right.setImageResource(R.drawable.button_player3_normal);
-                    break;
-                case 3:
-                    icon_left.setImageResource(R.drawable.button_player4_normal);
-                    icon_right.setImageResource(R.drawable.button_player4_normal);
+                    map.put(PLAYER_ICON, String.valueOf(R.drawable.button_player3_normal));
                     break;
             }
-            hbox.addView(icon_left, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 50, 0));
-            
-            TextView playerName = new TextView(this);
-            playerName.setPadding(20, 20, 20, 20);
-            playerName.setText(player.getName());
-            playerName.setTextSize(20);
-            hbox.addView(playerName, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0));
-            
-            View view = new View(this);
-            hbox.addView(view, new LinearLayout.LayoutParams(0, 0, 1));
-            
-            TextView playerScore = new TextView(this);
-            playerName.setGravity(Gravity.RIGHT);
-            playerScore.setPadding(20, 20, 20, 20);
-            playerScore.setText(String.valueOf(player.getScore()));
-            playerScore.setTextSize(20);
-            hbox.addView(playerScore, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0));
-            
-            hbox.addView(icon_right, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 50, 0));
+            listData.add(map);
         }
-        
+        SimpleAdapter adapter = new SimpleAdapter(this, listData, R.layout.final_score_entry, new String[] {PLAYER_NAME, PLAYER_SCORE, PLAYER_ICON}, new int[] {R.id.player_name, R.id.player_score, R.id.player_icon});
+        listView.setAdapter(adapter);
+        builder.setView(listView);
+        //~ builder.setPositiveButton(R.string.button_replay, new DialogInterface.OnClickListener() {
+                   //~ public void onClick(DialogInterface dialog, int id) {
+                       //~ finish();
+                   //~ }
+               //~ });
         builder.setNegativeButton(R.string.button_back_to_menu, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
                        finish();

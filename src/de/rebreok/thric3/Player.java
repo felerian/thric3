@@ -18,8 +18,10 @@
  */
 package de.rebreok.thric3;
 
+import java.lang.Comparable;
 
-class Player {
+
+class Player implements Comparable<Player>{
 	
 	private String	name;
 	private Pile	pile;
@@ -30,8 +32,12 @@ class Player {
 		this.pile = new Pile();
 		this.locked = false;
 	}
-
-	/**
+    
+    public int compareTo(Player other) {
+        return getScore() - other.getScore();
+    }
+	
+    /**
 	 * Returns true if the player is locked for calling an invalid set.
 	 * 
 	 * @return	true, if locked

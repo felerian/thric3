@@ -8,7 +8,7 @@
     <string name="button_help">Hilfe</string>
     <string name="button_about">Info</string>
     <string name="label_score">Punkte</string>
-    <string name="label_cards_left">Restkarten</string>
+    <string name="label_cards_left">Stapel</string>
     <string name="item_1_player">1 Spieler</string>
     <string name="item_2_players">2 Spieler</string>
     <string name="item_3_players">3 Spieler</string>
@@ -46,7 +46,7 @@
     <string name="manual_call">Wenn du ein Thric3 gefunden hast, drücke auf dieses Symbol und markiere die entsprechenden Karten. Drücke dann noch einmal auf dieses Symbol, um deine Auswahl zu bestätigen.</string>
     <string name="manual_deal">Wenn du kein Thric3 finden kannst, kannst du mit diesem Symbol drei weitere Karten vom Stapel auslegen. Bis zu 21 Karten können gleichzeitig ausliegen (unter 21 Karten befindet sich immer mindestens ein Thric3).</string>
     <string name="manual_title">Anleitung</string>
-    <string name="dialog_game_over_title">Spiel beendet</string>
+    <string name="dialog_game_over_title">Ergebnis</string>
     <string name="dialog_game_over_text">Es sind keine gültigen Thric3s mehr im Spiel. Endergebnis:</string>
     <string name="button_back_to_menu">Zurück zum Menü</string>
     <string name="button_replay">Nochmal</string>
