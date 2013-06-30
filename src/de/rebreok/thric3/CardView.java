@@ -161,10 +161,10 @@ public class CardView extends LinearLayout {
 				measuredWidth = widthSize;
 				measuredHeight = (int) (measuredWidth * ASPECT_RATIO);
 			}
-		} else if ( heightMode == MeasureSpec.AT_MOST) {
+		} else if ( heightMode == MeasureSpec.AT_MOST || heightMode == MeasureSpec.EXACTLY) {
 			measuredWidth = (int) (heightSize / ASPECT_RATIO);
 			measuredHeight = heightSize;
-		} else if ( widthMode == MeasureSpec.AT_MOST) {
+		} else if ( widthMode == MeasureSpec.AT_MOST || widthMode == MeasureSpec.EXACTLY) {
 			measuredWidth = widthSize;
 			measuredHeight = (int) (widthSize * ASPECT_RATIO);
 		} else {

@@ -20,7 +20,13 @@
             >
             <LinearLayout style="@style/score_frame" >
                 <TextView
-                    style="@style/textLightSmall"
+                    style="@style/text_counter_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_player2"
+                    />
+                <TextView
+                    style="@style/text_counter"
                     android:id="@+id/text_score_player2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -61,7 +67,13 @@
             >
             <LinearLayout style="@style/score_frame" >
                 <TextView
-                    style="@style/textLightSmall"
+                    style="@style/text_counter_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_cards_left"
+                    />
+                <TextView
+                    style="@style/text_counter"
                     android:id="@+id/text_cards_left"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -71,7 +83,13 @@
             <View style="@style/vspace" />
             <LinearLayout style="@style/score_frame" >
                 <TextView
-                    style="@style/textLightSmall"
+                    style="@style/text_counter_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_player1"
+                    />
+                <TextView
+                    style="@style/text_counter"
                     android:id="@+id/text_score_player1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"

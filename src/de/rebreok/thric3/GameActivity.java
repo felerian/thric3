@@ -30,6 +30,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -117,10 +118,6 @@ public class GameActivity extends Activity
         if (players.size() > 2) {
             playerScore = (TextView) findViewById(R.id.text_score_player3);
             playerScore.setText(String.valueOf(players.get(2).getScore()));
-        }
-        if (players.size() > 3) {
-            playerScore = (TextView) findViewById(R.id.text_score_player4);
-            playerScore.setText(String.valueOf(players.get(3).getScore()));
         }
     }
     
@@ -242,46 +239,57 @@ public class GameActivity extends Activity
             comment.setText(R.string.tutorial_explanation_wrong);
         }
         
-            TextView comment_colors = (TextView)body.findViewById(R.id.comment_colors);
-            if (grid.getSelectedCards().getColorCount() == 2) {
-                comment_colors.setText(R.string.tutorial_not_ok);
-                comment_colors.setTextColor(Color.RED);
-            } else {
-                comment_colors.setText(R.string.tutorial_ok);
-                comment_colors.setTextColor(Color.GREEN);
-            }
-            TextView comment_shapes = (TextView)body.findViewById(R.id.comment_shapes);
-            if (grid.getSelectedCards().getShapeCount() == 2) {
-                comment_shapes.setText(R.string.tutorial_not_ok);
-                comment_shapes.setTextColor(Color.RED);
-            } else {
-                comment_shapes.setText(R.string.tutorial_ok);
-                comment_shapes.setTextColor(Color.GREEN);
-            }
-            TextView comment_numbers = (TextView)body.findViewById(R.id.comment_numbers);
-            if (grid.getSelectedCards().getNumberCount() == 2) {
-                comment_numbers.setText(R.string.tutorial_not_ok);
-                comment_numbers.setTextColor(Color.RED);
-            } else {
-                comment_numbers.setText(R.string.tutorial_ok);
-                comment_numbers.setTextColor(Color.GREEN);
-            }
-            TextView comment_fillings = (TextView)body.findViewById(R.id.comment_fillings);
-            if (grid.getSelectedCards().getFillingCount() == 2) {
-                comment_fillings.setText(R.string.tutorial_not_ok);
-                comment_fillings.setTextColor(Color.RED);
-            } else {
-                comment_fillings.setText(R.string.tutorial_ok);
-                comment_fillings.setTextColor(Color.GREEN);
-            }
-            
-            //~ hbox_fillings.addView(label_fillings, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-            //~ hbox_fillings.addView(comment_fillings, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-            //~ vbox.addView(hbox_fillings);
-            //~ 
-        //~ }
+        ArrayList<Card> cards = new ArrayList<Card>(grid.getSelectedCards());
+        CardView cardView;
+        cardView = (CardView)body.findViewById(R.id.card1);
+        cardView.setCard(cards.get(0));
+        cardView = (CardView)body.findViewById(R.id.card2);
+        cardView.setCard(cards.get(1));
+        cardView = (CardView)body.findViewById(R.id.card3);
+        cardView.setCard(cards.get(2));
+
+        TextView comment_colors = (TextView)body.findViewById(R.id.comment_colors);
+        if (grid.getSelectedCards().getColorCount() == 2) {
+            comment_colors.setText(R.string.tutorial_not_ok);
+            comment_colors.setTextColor(Color.RED);
+        } else {
+            comment_colors.setText(R.string.tutorial_ok);
+            comment_colors.setTextColor(Color.GREEN);
+        }
+        TextView comment_shapes = (TextView)body.findViewById(R.id.comment_shapes);
+        if (grid.getSelectedCards().getShapeCount() == 2) {
+            comment_shapes.setText(R.string.tutorial_not_ok);
+            comment_shapes.setTextColor(Color.RED);
+        } else {
+            comment_shapes.setText(R.string.tutorial_ok);
+            comment_shapes.setTextColor(Color.GREEN);
+        }
+        TextView comment_numbers = (TextView)body.findViewById(R.id.comment_numbers);
+        if (grid.getSelectedCards().getNumberCount() == 2) {
+            comment_numbers.setText(R.string.tutorial_not_ok);
+            comment_numbers.setTextColor(Color.RED);
+        } else {
+            comment_numbers.setText(R.string.tutorial_ok);
+            comment_numbers.setTextColor(Color.GREEN);
+        }
+        TextView comment_fillings = (TextView)body.findViewById(R.id.comment_fillings);
+        if (grid.getSelectedCards().getFillingCount() == 2) {
+            comment_fillings.setText(R.string.tutorial_not_ok);
+            comment_fillings.setTextColor(Color.RED);
+        } else {
+            comment_fillings.setText(R.string.tutorial_ok);
+            comment_fillings.setTextColor(Color.GREEN);
+        }
+        
         builder.setPositiveButton(R.string.ok, null);
-        builder.create().show();
+        AlertDialog dialog = builder.create();
+        
+        dialog.show();
+        
+        LayoutParams params = dialog.getWindow().getAttributes();
+        params.width = LayoutParams.FILL_PARENT;
+        dialog.getWindow().setAttributes((LayoutParams) params);
+        
     }
     
     private void onGameOver() {

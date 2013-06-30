@@ -12,11 +12,9 @@
     <string name="item_1_player">1 Player</string>
     <string name="item_2_players">2 Players</string>
     <string name="item_3_players">3 Players</string>
-    <string name="item_4_players">4 Players</string>
     <string name="name_player1">Player 1</string>
     <string name="name_player2">Player 2</string>
     <string name="name_player3">Player 3</string>
-    <string name="name_player4">Player 4</string>
     <string name="toast_select">Select your Thric3</string>
     <string name="toast_no_cards_left">There are no cards left</string>
     <string name="toast_not_your_turn">It is not your turn</string>
