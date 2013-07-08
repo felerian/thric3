@@ -45,11 +45,13 @@
     <string name="manual_properties">Farbe: rot, grün oder blau\nForm: Kreuz, Herz oder Karo\nAnzahl: eins, zwei oder drei\nFüllung: leer, halb oder voll</string>
     <string name="manual_valid">Ein gültiges Set besteht aus drei Karten, die in jeder einzelnen dieser Eigenschaften entweder alle gleich oder alle verschieden sind. Dies ist ein Beispiel für ein gültiges Set.</string>
     <string name="manual_invalid">Dies ist kein gültiges Set, da zwei der Karten grün sind, die dritte jedoch blau. Das Tutorial kann dir helfen gültige Sets zu erkennen.</string>
-    <string name="manual_call">Wenn du ein gültiges Set gefunden hast, drücke auf dieses Symbol und markiere die entsprechenden Karten. Drücke dann noch einmal auf dieses Symbol, um deine Auswahl zu bestätigen.</string>
+    <string name="manual_call">Wenn du ein gültiges Set gefunden hast, drücke auf dieses Symbol und markiere die entsprechenden Karten. Drücke dann noch einmal auf dieses Symbol, um deine Auswahl zu bestätigen. Im Mehrspielermodus hast du 15 Sekunden Zeit dafür.</string>
     <string name="manual_deal">Wenn du kein gültiges Set finden kannst, lege mit diesem Symbol drei weitere Karten vom Stapel aus. Bis zu 21 Karten dürfen gleichzeitig ausliegen (unter 21 Karten befindet sich immer mindestens ein gültiges Set).</string>
     <string name="manual_title">Anleitung</string>
     <string name="dialog_game_over_title">Ergebnis</string>
     <string name="dialog_game_over_text">Es sind keine gültigen Sets mehr im Spiel. Endergebnis:</string>
     <string name="button_back_to_menu">Zurück zum Menü</string>
     <string name="button_replay">Nochmal</string>
+    <string name="fmt_seconds_left">noch %1$d Sekunden</string>
+    <string name="time_out">Zeit abgelaufen. Sie sind gesperrt.</string>
 </resources>

@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -57,6 +58,7 @@ public class GameActivity extends Activity
     private ArrayList<Player> players;
     private Player activePlayer;
     private boolean tutorial;
+    CountDownTimer timer;
     
     //~ private int hint_counter;
     //~ private final static int HINT_COUNTER_MAX = 3;
@@ -94,6 +96,16 @@ public class GameActivity extends Activity
                 break;
         }
         
+        timer = new CountDownTimer(16000, 5000) {
+                public void onTick(long millisUntilFinished) {
+                    timerStep(millisUntilFinished);
+                }
+
+                public void onFinish() {
+                    timeOut();
+                }
+            };
+
         deck = new Deck();
         grid = new CardGrid(this);
         LinearLayout gridContainer = (LinearLayout) findViewById(R.id.grid_container);
@@ -104,6 +116,29 @@ public class GameActivity extends Activity
         }
     }
     
+    /**
+     * Called after each timer step
+     */
+    public void timerStep(long millisUntilFinished) {
+        Toast.makeText(this, getResources().getString(R.string.fmt_seconds_left, millisUntilFinished / 1000), 1).show();
+    }
+    
+    /**
+     * Called after timeout
+     */
+    public void timeOut() {
+        Toast.makeText(this, R.string.time_out, 0).show();
+        activePlayer.lock();
+        grid.clearSelection();
+        activePlayer = null;
+        grid.setAcceptSelection(false);
+        dealCards(false);
+        updateUI();
+    }
+    
+    /**
+     * Toggle card selection if there is an active player
+     */
     public void onCardClick(CardView cardView) {
         if (activePlayer == null) {
             Toast.makeText(this, R.string.toast_call_first, 1).show();
@@ -162,9 +197,13 @@ public class GameActivity extends Activity
         grid.setAcceptSelection(true);
         if (tutorial)
             Toast.makeText(this, R.string.toast_select, 1).show();
+        if (players.size() > 1) {
+            timer.start();
+        }
     }
     
     private void confirmSet(Player player) {
+        timer.cancel();
         if (tutorial)
             onTutorialConfirmSet(grid.getSelectedCards().isValidSet());
         for (Player anyPlayer: players)

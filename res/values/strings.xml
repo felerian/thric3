@@ -45,11 +45,13 @@
     <string name="manual_properties">Color: red, green or blue\nShape: clubs, hearts or diamonds\nNumber: one, two or three\nFilling: empty, half or full</string>
     <string name="manual_valid">A valid Set consists of three cards which are either all equal or all different in each of these four properties. This is an example of a valid Set.</string>
     <string name="manual_invalid">This is not a valid Set, because two of these cards are green and one is blue. The tutorial can help you learn how to recognize valid Sets.</string>
-    <string name="manual_call">If you have found a valid Set, press this button and select the three cards you found. Then press the button again to confirm.</string>
+    <string name="manual_call">If you have found a valid Set, press this button and select the three cards you found. Then press the button again to confirm. In multiplayer mode you have 15 seconds to do that.</string>
     <string name="manual_deal">If you cannot find any valid Sets, press this button to deal three additional cards. Up to 21 cards can be in the game at the same time. 21 cards always contain at least one valid Set.</string>
     <string name="manual_title">Manual</string>
     <string name="dialog_game_over_title">Final Score</string>
     <string name="dialog_game_over_text">There are no valid Sets left in the game. Final Score:</string>
     <string name="button_back_to_menu">Back to Menu</string>
     <string name="button_replay">Play Again</string>
+    <string name="fmt_seconds_left">%1$d seconds left</string>
+    <string name="time_out">Timeout. You are now locked.</string>
 </resources>
