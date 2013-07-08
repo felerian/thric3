@@ -58,6 +58,9 @@ public class GameActivity extends Activity
     private Player activePlayer;
     private boolean tutorial;
     
+    //~ private int hint_counter;
+    //~ private final static int HINT_COUNTER_MAX = 3;
+    
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -96,6 +99,9 @@ public class GameActivity extends Activity
         LinearLayout gridContainer = (LinearLayout) findViewById(R.id.grid_container);
         gridContainer.addView(grid, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT, 0));
         updateUI();
+        if (tutorial) {
+            onTutorialHint(null);
+        }
     }
     
     public void onCardClick(CardView cardView) {
@@ -222,6 +228,37 @@ public class GameActivity extends Activity
         if (deck.size() == 0 && grid.getCount() < 21 && !grid.getAllCards().containsValidSet()) {
             onGameOver();
         }
+    }
+    
+    public void showHelp() {
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
+    }
+    
+    public void onTutorialHint(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+        ScrollView body;
+        //~ if (hint_counter == 0) {
+            body = (ScrollView) inflater.inflate(R.layout.dialog_hint_0, null);
+        //~ }
+        builder.setView(body);
+        
+        //~ builder.setNegativeButton(R.string.button_next_hint, new DialogInterface.OnClickListener() {
+                    //~ public void onClick(DialogInterface dialog, int id) {
+                        //~ onTutorialHint(null);
+                    //~ }
+                //~ });
+        builder.setNeutralButton(R.string.button_show_manual, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        showHelp();
+                    }
+                });
+        builder.setPositiveButton(R.string.ok, null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        //~ if (hint_counter >= HINT_COUNTER_MAX) { hint_counter = 0; }
+        //~ hint_counter++;
     }
     
     private void onTutorialConfirmSet(boolean correct) {
