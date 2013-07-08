@@ -24,9 +24,14 @@ import android.view.View;
 import android.view.Window;
 
 
+/**
+ * The manual
+ */
 public class HelpActivity extends Activity
 {
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created
+     */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -35,6 +40,9 @@ public class HelpActivity extends Activity
         setContentView(R.layout.help);
     }
     
+    /**
+     * Callback function to quit this activity
+     */
     public void onFinish(View view)
     {
         finish();

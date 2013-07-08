@@ -28,13 +28,17 @@ import android.view.View;
 import java.util.ArrayList;
 
 
+/**
+ * Widget displaying all cards on the table
+ */
 public class CardGrid extends LinearLayout {
-    
     private Context context;
     private boolean accept_selection;
-    
     private ArrayList<CardView> cardViews;
     
+    /**
+     * Constructor
+     */
     public CardGrid(Context context) {
         super(context);
         this.context = context;
@@ -73,6 +77,9 @@ public class CardGrid extends LinearLayout {
         }
     }
     
+    /**
+     * Toggle selection of given CardView
+     */
     public void toggleSelection(View view) {
         CardView cardView = (CardView) view;
         if (cardView.getCard() != null) {
@@ -80,12 +87,18 @@ public class CardGrid extends LinearLayout {
         }
     }
     
+    /**
+     * Un-select all cards on the table
+     */
     public void clearSelection() {
         for (CardView cardView: cardViews) {
             cardView.setSelection(false);
         }
     }
     
+    /**
+     * Return a Pile of all selected cards on the table
+     */
     public Pile getSelectedCards() {
         Pile result = new Pile();
         for (CardView cardView: cardViews) {
@@ -96,6 +109,9 @@ public class CardGrid extends LinearLayout {
         return result;
     }
     
+    /**
+     * Return a Pile of all cards on the table
+     */
     public Pile getAllCards() {
         Pile result = new Pile();
         for (CardView cardView: cardViews) {
@@ -106,6 +122,9 @@ public class CardGrid extends LinearLayout {
         return result;
     }
     
+    /**
+     * Set whether selection of cards is allowed
+     */
     public void setAcceptSelection(boolean accept) {
         accept_selection = accept;
     }

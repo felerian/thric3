@@ -22,7 +22,7 @@ import java.util.HashSet;
 
 
 /**
- * An unordered pile of cards
+ * An unordered pile (set) of cards
  */
 class Pile extends HashSet<Card>{
 

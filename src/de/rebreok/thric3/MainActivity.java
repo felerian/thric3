@@ -29,6 +29,11 @@ import android.view.Window;
 import android.widget.Toast;
 
 
+/**
+ * The Title screen of Thric3
+ * 
+ * Displays the app logo and the main menu
+ */
 public class MainActivity extends Activity
 {
     public final static String GAME_MODE = "game_mode";
@@ -37,7 +42,9 @@ public class MainActivity extends Activity
     public final static int MODE_2P = 2;
     public final static int MODE_3P = 3;
     
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created
+     */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -46,12 +53,18 @@ public class MainActivity extends Activity
         setContentView(R.layout.main);
     }
     
+    /**
+     * Callback function to start the tutorial
+     */
     public void onButtonTutorial(View view) {
         Intent intent = new Intent(this, GameActivity.class);
         intent.putExtra(MainActivity.GAME_MODE, MainActivity.MODE_TUTORIAL);
         startActivity(intent);
     }
     
+    /**
+     * Callback function to start a normal (single- or multiplayer) game
+     */
     public void onButtonStartGame(View view) {
         Resources res = getResources();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -66,12 +79,18 @@ public class MainActivity extends Activity
         builder.create().show();
     }
     
+    /**
+     * Start a normal (single- or multiplayer) game
+     */
     public void startGame(int nr_of_players) {
         Intent intent = new Intent(this, GameActivity.class);
         intent.putExtra(GAME_MODE, nr_of_players);
         startActivity(intent);
     }
     
+    /**
+     * Callback function to display the manual
+     */
     public void onButtonHelp(View view) {
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);

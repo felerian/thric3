@@ -47,6 +47,9 @@ import java.util.HashMap;
 import java.util.List;
 
 
+/**
+ * The actual game
+ */
 public class GameActivity extends Activity
 {
     private final static String PLAYER_NAME = "player_name";
@@ -63,7 +66,9 @@ public class GameActivity extends Activity
     //~ private int hint_counter;
     //~ private final static int HINT_COUNTER_MAX = 3;
     
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created
+     */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -147,6 +152,9 @@ public class GameActivity extends Activity
         }
     }
     
+    /**
+     * Update the players' score counters and the deck size counter
+     */
     private void updateUI() {
         TextView cardsLeft = (TextView) findViewById(R.id.text_cards_left);
         cardsLeft.setText(String.valueOf(deck.size()));
@@ -162,6 +170,11 @@ public class GameActivity extends Activity
         }
     }
     
+    /**
+     * Callback function for the player button
+     * 
+     * Either starts or ends the card selection.
+     */
     public void onPlayerButton(View view) {
         ToggleButton button = (ToggleButton) view;
         Player player;
@@ -192,6 +205,9 @@ public class GameActivity extends Activity
         }
     }
     
+    /**
+     * Make player the active player to be able to select cards
+     */
     private void callSet(Player player) {
         activePlayer = player;
         grid.setAcceptSelection(true);
@@ -202,6 +218,13 @@ public class GameActivity extends Activity
         }
     }
     
+    /**
+     * Check the chosen set for validity
+     * 
+     * Unlocks all players and either grants points to or locks the current
+     * player, based on the validity of the chosen set. In tutorial mode an
+     * explaining dialog is shown.
+     */
     private void confirmSet(Player player) {
         timer.cancel();
         if (tutorial)
@@ -233,10 +256,20 @@ public class GameActivity extends Activity
         updateUI();
     }
     
+    /**
+     * Callback function to deal additional cards
+     */
     public void onButtonDealCards(View view) {
         dealCards(true);
     }
     
+    /**
+     * Deal additional cards
+     * 
+     * Deal cards until there are 12 cards on the table or the deck is empty.
+     * In case force is true, deal 3 additional cards unless there are none
+     * left on the deck or the maximum of 21 cards on the table is reached.
+     */
     private void dealCards(boolean force) {
         int cards_in_game = grid.getCount();
         if (force || cards_in_game < 12) {
@@ -263,17 +296,26 @@ public class GameActivity extends Activity
         checkForGameOver();
     }
     
+    /**
+     * End the game in case there are no valid sets left
+     */
     private void checkForGameOver() {
         if (deck.size() == 0 && grid.getCount() < 21 && !grid.getAllCards().containsValidSet()) {
             onGameOver();
         }
     }
     
+    /**
+     * Show the manual
+     */
     public void showHelp() {
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
     }
     
+    /**
+     * Display a hint dialog during the tutorial
+     */
     public void onTutorialHint(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -300,6 +342,12 @@ public class GameActivity extends Activity
         //~ hint_counter++;
     }
     
+    /**
+     * Display a dialog after confirming a possible set during tutorial
+     * 
+     * The dialog provides information about why or why not the selected cards
+     * constitute a valid set.
+     */
     private void onTutorialConfirmSet(boolean correct) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -368,6 +416,9 @@ public class GameActivity extends Activity
         
     }
     
+    /**
+     * Display a dialog with the final score
+     */
     private void onGameOver() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.dialog_game_over_title);

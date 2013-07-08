@@ -21,6 +21,12 @@ package de.rebreok.thric3;
 import java.lang.Comparable;
 
 
+/**
+ * A player
+ * 
+ * Complete with his/her own pile of cards, the ability to count his/her score
+ * and the possibility to be locked.
+ */
 class Player implements Comparable<Player>{
 	
 	private String	name;

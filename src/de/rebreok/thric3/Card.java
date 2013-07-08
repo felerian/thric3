@@ -23,6 +23,9 @@ import java.util.HashSet;
 import java.util.Collections;
 
 
+/**
+ * A card in the game of Thric3
+ */
 class Card {
 	
 	static enum Color {RED, GREEN, BLUE};

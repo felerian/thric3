@@ -29,6 +29,10 @@ import android.widget.LinearLayout;
 
 import java.lang.Math;
 
+
+/**
+ * Widget displaying one card
+ */
 public class CardView extends LinearLayout {
     
     private final static int DEFAULT_WIDTH = 120;
@@ -37,10 +41,16 @@ public class CardView extends LinearLayout {
     private Card card;
     private boolean selected;
     
+    /**
+     * Return the displayed card
+     */
     public Card getCard() {
         return card;
     }
     
+    /**
+     * Constructor, used to inflate from xml
+     */
     public CardView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
@@ -49,7 +59,10 @@ public class CardView extends LinearLayout {
         setGravity(Gravity.CENTER);
         setCard(null);
     }
-    
+     
+    /**
+     * Constructor
+     */
     public CardView(Context context, Card card) {
         super(context);
         this.context = context;
@@ -59,6 +72,9 @@ public class CardView extends LinearLayout {
         setCard(card);
     }
     
+    /**
+     * Set the card to be displayed
+     */
     public void setCard(Card card) {
         this.card = card;
         removeAllViews();
@@ -99,6 +115,9 @@ public class CardView extends LinearLayout {
         setSelection(false);
     }
     
+    /**
+     * Update the background image (an empty card)
+     */
     private void updateBackground() {
         //~ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             //~ if (card != null) {
@@ -123,6 +142,9 @@ public class CardView extends LinearLayout {
         //~ }
     }
     
+    /**
+     * Set the selection state
+     */
     public void setSelection(boolean selected) {
         if (card != null) {
             this.selected = selected;
@@ -130,6 +152,9 @@ public class CardView extends LinearLayout {
         updateBackground();
     }
     
+    /**
+     * Check whether this card is selected
+     */
     public boolean isSelected() {
         return selected;
     }
